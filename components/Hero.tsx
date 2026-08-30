@@ -41,19 +41,23 @@ export default function Hero() {
               Fast, reliable and professional repair services for washing machines, refrigerators, air conditioners, microwaves, and TVs across Delhi, Noida, Gurgaon, Ghaziabad &amp; Faridabad.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
               <button
                 type="button"
                 onClick={() => openBookingModal('General Appliance Repair')}
                 suppressHydrationWarning
-                className="flex items-center justify-center gap-2 bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 hover:-translate-y-0.5 cursor-pointer"
+                className="flex items-center justify-center gap-2 bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 hover:-translate-y-0.5 cursor-pointer min-h-[48px]"
               >
                 <CalendarCheck size={20} />
-                Book a Service
+                <span>Book a Service</span>
               </button>
-              <a href="tel:+918008070025" className="flex items-center justify-center gap-2 bg-white border-2 border-gray-200 hover:border-primary-navy text-primary-navy px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:bg-gray-50">
+              <a 
+                href="tel:+918008070025" 
+                suppressHydrationWarning
+                className="flex items-center justify-center gap-2 bg-white border-2 border-gray-200 hover:border-primary-navy text-primary-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all hover:bg-gray-50 min-h-[48px]"
+              >
                 <PhoneCall size={20} />
-                +91 8008070025
+                <span>+91 8008070025</span>
               </a>
             </div>
             

@@ -145,12 +145,14 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
           <div>
             <input
               type="text"
+              autoComplete="name"
+              autoCapitalize="words"
               placeholder="Name"
               {...register('name')}
               suppressHydrationWarning
-              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-lg px-3.5 py-2.5 sm:py-3 border-0 focus:outline-none focus:ring-2 ${
+              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-xl px-3.5 py-3 border-0 focus:outline-none focus:ring-2 ${
                 errors.name ? 'focus:ring-red-400 ring-2 ring-red-400' : 'focus:ring-accent-red'
-              } text-sm sm:text-base transition-all`}
+              } text-base transition-all min-h-[44px]`}
             />
             {errors.name && (
               <p className="text-red-300 text-[11px] sm:text-xs mt-1 font-medium pl-1">{errors.name.message}</p>
@@ -161,12 +163,16 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
           <div>
             <input
               type="email"
+              inputMode="email"
+              autoComplete="email"
+              autoCapitalize="none"
+              spellCheck="false"
               placeholder="Email"
               {...register('email')}
               suppressHydrationWarning
-              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-lg px-3.5 py-2.5 sm:py-3 border-0 focus:outline-none focus:ring-2 ${
+              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-xl px-3.5 py-3 border-0 focus:outline-none focus:ring-2 ${
                 errors.email ? 'focus:ring-red-400 ring-2 ring-red-400' : 'focus:ring-accent-red'
-              } text-sm sm:text-base transition-all`}
+              } text-base transition-all min-h-[44px]`}
             />
             {errors.email && (
               <p className="text-red-300 text-[11px] sm:text-xs mt-1 font-medium pl-1">{errors.email.message}</p>
@@ -177,12 +183,16 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
           <div>
             <input
               type="tel"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              autoComplete="tel"
+              maxLength={10}
               placeholder="Phone Number"
               {...register('phone')}
               suppressHydrationWarning
-              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-lg px-3.5 py-2.5 sm:py-3 border-0 focus:outline-none focus:ring-2 ${
+              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-xl px-3.5 py-3 border-0 focus:outline-none focus:ring-2 ${
                 errors.phone ? 'focus:ring-red-400 ring-2 ring-red-400' : 'focus:ring-accent-red'
-              } text-sm sm:text-base transition-all`}
+              } text-base transition-all min-h-[44px]`}
             />
             {errors.phone && (
               <p className="text-red-300 text-[11px] sm:text-xs mt-1 font-medium pl-1">{errors.phone.message}</p>
@@ -193,12 +203,13 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
           <div>
             <input
               type="text"
+              autoComplete="street-address"
               placeholder="Address"
               {...register('address')}
               suppressHydrationWarning
-              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-lg px-3.5 py-2.5 sm:py-3 border-0 focus:outline-none focus:ring-2 ${
+              className={`w-full bg-white text-gray-900 placeholder:text-gray-400 rounded-xl px-3.5 py-3 border-0 focus:outline-none focus:ring-2 ${
                 errors.address ? 'focus:ring-red-400 ring-2 ring-red-400' : 'focus:ring-accent-red'
-              } text-sm sm:text-base transition-all`}
+              } text-base transition-all min-h-[44px]`}
             />
             {errors.address && (
               <p className="text-red-300 text-[11px] sm:text-xs mt-1 font-medium pl-1">{errors.address.message}</p>
@@ -207,16 +218,16 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
 
           {/* Choose Your Service Select Field */}
           <div>
-            <label className="block text-left text-white font-medium text-xs sm:text-sm mb-1 pl-0.5">
+            <label className="block text-left text-white font-medium text-xs sm:text-sm mb-1.5 pl-0.5">
               Choose Your Service
             </label>
             <div className="relative">
               <select
                 {...register('service')}
                 suppressHydrationWarning
-                className={`w-full bg-white text-gray-900 rounded-lg px-3.5 py-2.5 sm:py-3 border-0 focus:outline-none focus:ring-2 ${
+                className={`w-full bg-white text-gray-900 rounded-xl pl-3.5 pr-10 py-3 border-0 focus:outline-none focus:ring-2 ${
                   errors.service ? 'focus:ring-red-400 ring-2 ring-red-400' : 'focus:ring-accent-red'
-                } text-sm sm:text-base appearance-none cursor-pointer pr-9 transition-all font-normal`}
+                } text-base appearance-none cursor-pointer transition-all font-normal min-h-[44px]`}
               >
                 {serviceOptions.map((opt) => (
                   <option key={opt} value={opt} className="text-gray-900 py-1">
@@ -224,7 +235,7 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
                   </option>
                 ))}
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-gray-700">
                 <ChevronDown size={18} />
               </div>
             </div>
@@ -238,7 +249,7 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
             type="submit"
             disabled={isSubmitting}
             suppressHydrationWarning
-            className="w-full bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white font-bold tracking-wider py-2.5 sm:py-3 rounded-lg text-sm sm:text-base uppercase transition-all duration-200 shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-4 sm:mt-5 cursor-pointer"
+            className="w-full bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white font-bold tracking-wider py-3.5 rounded-xl text-base uppercase transition-all duration-200 shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-4 sm:mt-5 cursor-pointer min-h-[48px]"
           >
             {isSubmitting ? (
               <>

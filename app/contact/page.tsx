@@ -209,7 +209,7 @@ export default function ContactPage() {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                     {/* Name */}
                     <div>
                       <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
@@ -217,14 +217,17 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
+                        autoComplete="name"
+                        autoCapitalize="words"
                         placeholder="e.g. Amit Sharma"
                         {...register('name')}
-                        className={`w-full bg-gray-50 text-gray-900 rounded-xl px-4 py-3 border ${
+                        suppressHydrationWarning
+                        className={`w-full bg-gray-50 text-gray-900 rounded-xl px-3.5 py-3 border ${
                           errors.name ? 'border-red-400 ring-2 ring-red-100' : 'border-gray-200'
-                        } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-sm transition-all`}
+                        } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-base sm:text-sm transition-all min-h-[44px]`}
                       />
                       {errors.name && (
-                        <p className="text-red-500 text-xs mt-1 font-medium">{errors.name.message}</p>
+                        <p className="text-red-500 text-xs mt-1 font-medium pl-0.5">{errors.name.message}</p>
                       )}
                     </div>
 
@@ -235,15 +238,19 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="tel"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                        autoComplete="tel"
                         maxLength={10}
                         placeholder="10-digit mobile number"
                         {...register('phone')}
-                        className={`w-full bg-gray-50 text-gray-900 rounded-xl px-4 py-3 border ${
+                        suppressHydrationWarning
+                        className={`w-full bg-gray-50 text-gray-900 rounded-xl px-3.5 py-3 border ${
                           errors.phone ? 'border-red-400 ring-2 ring-red-100' : 'border-gray-200'
-                        } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-sm transition-all`}
+                        } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-base sm:text-sm transition-all min-h-[44px]`}
                       />
                       {errors.phone && (
-                        <p className="text-red-500 text-xs mt-1 font-medium">{errors.phone.message}</p>
+                        <p className="text-red-500 text-xs mt-1 font-medium pl-0.5">{errors.phone.message}</p>
                       )}
                     </div>
                   </div>
@@ -255,14 +262,19 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="email"
+                      inputMode="email"
+                      autoComplete="email"
+                      autoCapitalize="none"
+                      spellCheck="false"
                       placeholder="name@example.com"
                       {...register('email')}
-                      className={`w-full bg-gray-50 text-gray-900 rounded-xl px-4 py-3 border ${
+                      suppressHydrationWarning
+                      className={`w-full bg-gray-50 text-gray-900 rounded-xl px-3.5 py-3 border ${
                         errors.email ? 'border-red-400 ring-2 ring-red-100' : 'border-gray-200'
-                      } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-sm transition-all`}
+                      } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-base sm:text-sm transition-all min-h-[44px]`}
                     />
                     {errors.email && (
-                      <p className="text-red-500 text-xs mt-1 font-medium">{errors.email.message}</p>
+                      <p className="text-red-500 text-xs mt-1 font-medium pl-0.5">{errors.email.message}</p>
                     )}
                   </div>
 
@@ -274,7 +286,8 @@ export default function ContactPage() {
                     <div className="relative">
                       <select
                         {...register('service')}
-                        className="w-full bg-gray-50 text-gray-900 rounded-xl px-4 py-3 border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy appearance-none font-medium text-sm transition-all cursor-pointer"
+                        suppressHydrationWarning
+                        className={`w-full bg-gray-50 text-gray-900 rounded-xl pl-3.5 pr-10 py-3 border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy appearance-none font-medium text-base sm:text-sm transition-all cursor-pointer min-h-[44px]`}
                       >
                         <option value="Washing Machine Repair">Washing Machine Repair</option>
                         <option value="Refrigerator Service">Refrigerator Service</option>
@@ -283,7 +296,7 @@ export default function ContactPage() {
                         <option value="LED/LCD TV Repair">LED/LCD TV Repair</option>
                         <option value="Other Appliances Repair">Other Home Appliances</option>
                       </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-gray-500">
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3.5 text-gray-500">
                         <ChevronDown size={18} />
                       </div>
                     </div>
@@ -296,14 +309,16 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       rows={3}
+                      autoComplete="street-address"
                       placeholder="Enter your street address, apartment, locality, or sector..."
                       {...register('address')}
-                      className={`w-full bg-gray-50 text-gray-900 rounded-xl px-4 py-3 border ${
+                      suppressHydrationWarning
+                      className={`w-full bg-gray-50 text-gray-900 rounded-xl px-3.5 py-3 border ${
                         errors.address ? 'border-red-400 ring-2 ring-red-100' : 'border-gray-200'
-                      } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-sm transition-all`}
+                      } focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-navy text-base sm:text-sm transition-all`}
                     />
                     {errors.address && (
-                      <p className="text-red-500 text-xs mt-1 font-medium">{errors.address.message}</p>
+                      <p className="text-red-500 text-xs mt-1 font-medium pl-0.5">{errors.address.message}</p>
                     )}
                   </div>
 
@@ -311,7 +326,8 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white font-bold tracking-wide py-3.5 rounded-xl text-base uppercase transition-all shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                    suppressHydrationWarning
+                    className="w-full bg-accent-red hover:bg-accent-red-hover active:scale-[0.99] text-white font-bold tracking-wide py-3.5 sm:py-4 rounded-xl text-sm sm:text-base uppercase transition-all shadow-lg shadow-accent-red/25 hover:shadow-accent-red/40 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-3 cursor-pointer min-h-[48px]"
                   >
                     {isSubmitting ? (
                       <>
