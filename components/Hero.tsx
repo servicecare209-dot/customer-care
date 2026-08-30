@@ -30,7 +30,7 @@ export default function Hero() {
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-navy leading-tight mb-6">
               Doorstep Appliance Repair &amp; Service in <span className="text-accent-red relative inline-block">
-                Delhi NCR
+                India
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-red/20" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
                 </svg>

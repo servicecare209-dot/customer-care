@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${brand.name} Appliance Repair Service in Delhi NCR`,
+          alt: `${brand.name} Appliance Repair Service in India`,
         }
       ],
       locale: 'en_IN',
@@ -123,7 +123,7 @@ export default async function BrandPage({ params }: Props) {
           }
         ],
         'areaServed': [
-          'Delhi', 'New Delhi', 'Noida', 'Greater Noida', 'Gurugram', 'Faridabad', 'Ghaziabad', 'Sonipat', 'Bahadurgarh'
+          'Bangalore', 'Hyderabad', 'Lucknow', 'Mumbai', 'Gurugram', 'Greater Faridabad', 'Faridabad', 'Ghaziabad', 'Noida & Greater Noida', 'East Delhi', 'West Delhi', 'South Delhi', 'North West Delhi', 'Central Delhi', 'North East Delhi'
         ],
         'aggregateRating': {
           '@type': 'AggregateRating',
@@ -183,7 +183,7 @@ export default async function BrandPage({ params }: Props) {
         },
         'areaServed': {
           '@type': 'State',
-          'name': 'Delhi NCR'
+          'name': 'India'
         },
         'hasOfferCatalog': {
           '@type': 'OfferCatalog',

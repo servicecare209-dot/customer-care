@@ -297,7 +297,7 @@ export default function Navbar() {
               {/* Service Trust Strip */}
               <div className="pt-4 mt-4 border-t border-gray-100 flex items-center gap-2.5 text-xs text-gray-500 bg-blue-50/60 p-3.5 rounded-2xl border border-blue-100">
                 <ShieldCheck size={18} className="text-primary-navy shrink-0" />
-                <span className="font-medium text-gray-700">Verified Technicians • Doorstep Support Across Delhi NCR</span>
+                <span className="font-medium text-gray-700">Verified Technicians • Doorstep Support Across India</span>
               </div>
             </div>
 

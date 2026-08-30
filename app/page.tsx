@@ -15,8 +15,8 @@ import Footer from '@/components/Footer';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 
 export const metadata: Metadata = {
-  title: 'Home Appliance Repair & Service in Delhi NCR | Customer Care',
-  description: 'Expert doorstep home appliance repair in Delhi NCR. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
+  title: 'Home Appliance Repair & Service in India | Customer Care',
+  description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
   alternates: {
     canonical: 'https://customercarerepaircenter.com/',
   },
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
   },
   openGraph: {
-    title: 'Home Appliance Repair & Service in Delhi NCR | Customer Care',
-    description: 'Expert doorstep home appliance repair in Delhi NCR. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
+    title: 'Home Appliance Repair & Service in India | Customer Care',
+    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
     url: 'https://customercarerepaircenter.com/',
     siteName: 'Customer Care Appliance Repair',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: 'https://customercarerepaircenter.com/images/indian_customer_repair_1787336376855.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Home Appliance Repair Technician in Delhi NCR',
+        alt: 'Professional Home Appliance Repair Technician in India',
       }
     ],
     locale: 'en_IN',
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Appliance Repair & Service in Delhi NCR | Customer Care',
-    description: 'Expert doorstep home appliance repair in Delhi NCR. Certified technicians for washing machines, fridges, ACs, microwaves & TVs.',
+    title: 'Home Appliance Repair & Service in India | Customer Care',
+    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs.',
     images: ['https://customercarerepaircenter.com/images/indian_customer_repair_1787336376855.jpg'],
   },
 };
@@ -85,7 +85,7 @@ export default function Home() {
         '@id': 'https://customercarerepaircenter.com/#business',
         'name': 'Customer Care Appliance Repair - Aksha Traders',
         'image': 'https://customercarerepaircenter.com/images/indian_customer_repair_1787336376855.jpg',
-        'description': 'Leading independent doorstep appliance repair service provider across Delhi NCR for washing machines, refrigerators, air conditioners, microwaves, and TVs.',
+        'description': 'Leading independent doorstep appliance repair service provider across India for washing machines, refrigerators, air conditioners, microwaves, and TVs.',
         'url': 'https://customercarerepaircenter.com/',
         'telephone': '+918008070025',
         'priceRange': '₹₹',
@@ -113,7 +113,7 @@ export default function Home() {
           }
         ],
         'areaServed': [
-          'Delhi', 'New Delhi', 'Noida', 'Greater Noida', 'Gurugram', 'Faridabad', 'Ghaziabad', 'Sonipat', 'Bahadurgarh'
+          'Bangalore', 'Hyderabad', 'Lucknow', 'Mumbai', 'Gurugram', 'Greater Faridabad', 'Faridabad', 'Ghaziabad', 'Noida & Greater Noida', 'East Delhi', 'West Delhi', 'South Delhi', 'North West Delhi', 'Central Delhi', 'North East Delhi'
         ],
         'aggregateRating': {
           '@type': 'AggregateRating',

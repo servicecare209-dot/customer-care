@@ -62,7 +62,7 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
             Our <span className="text-primary-navy">{brand.name}</span> Repair &amp; Service Gallery
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            Real doorstep technician diagnostics, genuine component replacements, and completed repairs for {brand.name} appliances across Delhi NCR.
+            Real doorstep technician diagnostics, genuine component replacements, and completed repairs for {brand.name} appliances across India.
           </p>
         </div>
 

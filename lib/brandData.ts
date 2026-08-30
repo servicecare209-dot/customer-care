@@ -49,16 +49,16 @@ export const brands: BrandData[] = [
   {
     slug: 'lg',
     name: 'LG',
-    title: 'LG Appliance Repair & Service Support in Delhi NCR',
+    title: 'LG Appliance Repair & Service Support in India',
     tagline: 'Specialized Doorstep Diagnostics for LG Smart Inverter & AI DirectDrive Appliances',
     heroImage: '/images/brands/lg/lg-hero-1.webp',
     heroImages: [
       { src: '/images/brands/lg/lg-hero-1.webp', alt: 'LG service technician in official uniform repairing AI DirectDrive washing machine in Delhi home', tagline: 'AI DirectDrive Washer Diagnostics' },
-      { src: '/images/brands/lg/lg-hero-2.webp', alt: 'LG technician inspecting Smart Inverter compressor on double-door refrigerator in Delhi NCR', tagline: 'Linear Inverter Compressor Service' },
+      { src: '/images/brands/lg/lg-hero-2.webp', alt: 'LG technician inspecting Smart Inverter compressor on double-door refrigerator in India', tagline: 'Linear Inverter Compressor Service' },
       { src: '/images/brands/lg/lg-hero-3.webp', alt: 'Certified HVAC engineer servicing LG Dual Inverter split AC indoor unit with pressure manifold', tagline: 'Dual Inverter Split AC Maintenance' },
       { src: '/images/brands/lg/lg-hero-4.webp', alt: 'Electronics specialist testing LG OLED 4K Smart TV display panel and motherboard in New Delhi', tagline: 'OLED 4K TV Panel & Circuit Diagnostics' }
     ],
-    description: 'Independent out-of-warranty repair service for LG refrigerators, washing machines, inverter air conditioners, microwave ovens, and Smart TVs across Delhi NCR.',
+    description: 'Independent out-of-warranty repair service for LG refrigerators, washing machines, inverter air conditioners, microwave ovens, and Smart TVs across India.',
     overviewParagraphs: [
       'LG home appliances are celebrated for their cutting-edge engineering, featuring patented technologies like AI Direct Drive (AI DD™) motors, Smart Inverter compressors, and ThinQ smart diagnostics. When your LG appliance encounters operational faults, precision troubleshooting is vital to safeguard these complex digital circuits.',
       'Our team of certified appliance technicians brings deep expertise in diagnosing inverter PCB boards, linear compressors, magnetrons, and display panels. We provide transparent, doorstep diagnostic assessments across Delhi, Noida, Gurugram, Ghaziabad, and Faridabad within 30 minutes of booking.',
@@ -72,7 +72,7 @@ export const brands: BrandData[] = [
       'LG Charcoal Convection Microwave Ovens',
       'LG OLED, NanoCell & 4K UHD Smart TVs'
     ],
-    seoTitle: 'LG Appliance Repair & Service in Delhi NCR | Customer Care',
+    seoTitle: 'LG Appliance Repair & Service in India | Customer Care',
     seoDescription: 'Expert LG appliance repair service across Delhi, Noida, Gurugram & Faridabad. Doorstep repair for LG Washing Machines, Fridges, ACs & TVs. Book your visit!',
     services: [
       { name: 'LG Washing Machine Repair', description: 'Expert diagnosis for AI DirectDrive front-loaders, top-loaders, water drainage faults, drum noise, and motor PCB errors.', iconType: 'washing-machine' },
@@ -89,14 +89,14 @@ export const brands: BrandData[] = [
     ],
     faqs: [
       { q: 'Do you repair LG Smart Inverter and AI DirectDrive appliances?', a: 'Yes. Our senior technicians specialize in LG digital inverter electronics, brushless direct-drive motors, and micro-controller PCB boards.' },
-      { q: 'What is your response time for doorstep LG appliance repair?', a: 'We provide prompt doorstep assistance with verified technicians dispatched to your location across Delhi NCR within 30 to 60 minutes.' },
+      { q: 'What is your response time for doorstep LG appliance repair?', a: 'We provide prompt doorstep assistance with verified technicians dispatched to your location across India within 30 to 60 minutes.' },
       { q: 'Are replacement parts covered under warranty?', a: 'Yes. All replaced parts and repair labor are protected under our comprehensive 30-day doorstep service warranty.' },
       { q: 'Are you an official LG authorized service center?', a: 'No. We are an independent, third-party repair provider specializing exclusively in affordable out-of-warranty appliances.' }
     ],
     gallery: [
       { src: '/images/brands/lg/lg-gallery-1.webp', alt: 'Certified technician repairing LG AI DirectDrive front-load washing machine in an Indian home', title: 'LG Washing Machine Drum Diagnostics', category: 'Washing Machine' },
       { src: '/images/brands/lg/lg-gallery-2.webp', alt: 'Doorstep technician inspecting LG Smart Inverter refrigerator compressor and cooling coils', title: 'LG Refrigerator Compressor Repair', category: 'Refrigerator' },
-      { src: '/images/brands/lg/lg-gallery-3.webp', alt: 'HVAC engineer servicing LG Dual Inverter split AC indoor unit in Delhi NCR apartment', title: 'LG Dual Inverter AC Servicing', category: 'Air Conditioner' },
+      { src: '/images/brands/lg/lg-gallery-3.webp', alt: 'HVAC engineer servicing LG Dual Inverter split AC indoor unit in India apartment', title: 'LG Dual Inverter AC Servicing', category: 'Air Conditioner' },
       { src: '/images/brands/lg/lg-gallery-4.webp', alt: 'Electronics specialist testing LG microwave magnetron and high-voltage circuit board', title: 'LG Convection Microwave Repair', category: 'Microwave' },
       { src: '/images/brands/lg/lg-gallery-5.webp', alt: 'Display technician troubleshooting LG OLED 4K Smart TV backlight and motherboard', title: 'LG OLED TV Panel Diagnostics', category: 'Television' },
       { src: '/images/brands/lg/lg-gallery-6.webp', alt: 'Satisfied Indian customer receiving digital service invoice after LG appliance repair', title: 'Doorstep Customer Satisfaction', category: 'Service Guarantee' }
@@ -105,7 +105,7 @@ export const brands: BrandData[] = [
   {
     slug: 'samsung',
     name: 'Samsung',
-    title: 'Samsung Appliance Repair & Service Support in Delhi NCR',
+    title: 'Samsung Appliance Repair & Service Support in India',
     tagline: 'Expert Independent Technicians for Samsung Digital Inverter & EcoBubble Technology',
     heroImage: '/images/brands/samsung/samsung-hero-1.webp',
     heroImages: [
@@ -114,10 +114,10 @@ export const brands: BrandData[] = [
       { src: '/images/brands/samsung/samsung-hero-3.webp', alt: 'HVAC specialist servicing Samsung WindFree split air conditioner in Gurgaon apartment', tagline: 'WindFree Inverter AC Maintenance' },
       { src: '/images/brands/samsung/samsung-hero-4.webp', alt: 'Display engineer repairing Samsung QLED 4K Smart TV motherboard and LED backlight', tagline: 'QLED 4K Smart TV Panel Diagnostics' }
     ],
-    description: 'Fast doorstep repair and maintenance for Samsung refrigerators, EcoBubble washing machines, WindFree ACs, microwaves, and Smart TVs in Delhi NCR.',
+    description: 'Fast doorstep repair and maintenance for Samsung refrigerators, EcoBubble washing machines, WindFree ACs, microwaves, and Smart TVs in India.',
     overviewParagraphs: [
       'Samsung appliances integrate sophisticated electronic control systems, including Digital Inverter compressors with variable-speed operation, EcoBubble™ wash generators, and SpaceMax™ high-efficiency thermal insulation. Proper maintenance requires specialized digital multimeters and manufacturer-compatible diagnostic routines.',
-      'Our seasoned technicians have extensive practical field experience resolving complex Samsung motherboard faults, BLDC motor breakdowns, sensor calibration errors, and cooling system leaks across residential households in Delhi NCR.',
+      'Our seasoned technicians have extensive practical field experience resolving complex Samsung motherboard faults, BLDC motor breakdowns, sensor calibration errors, and cooling system leaks across residential households in India.',
       'We arrive with fully equipped mobile toolkits to inspect your appliance on-site, provide an honest, upfront written estimate, and complete repairs the same day so your family experiences zero downtime.'
     ],
     supportedModels: [
@@ -128,7 +128,7 @@ export const brands: BrandData[] = [
       'Samsung Slim Fry & Ceramic Enamel Microwaves',
       'Samsung QLED, Crystal 4K & The Frame Smart TVs'
     ],
-    seoTitle: 'Samsung Appliance Repair in Delhi NCR | Customer Care',
+    seoTitle: 'Samsung Appliance Repair in India | Customer Care',
     seoDescription: 'Trusted Samsung appliance repair in Delhi, Noida, Gurgaon & Faridabad. Same-day doorstep service for Samsung Washing Machines, Fridges, ACs & TVs. Book now!',
     services: [
       { name: 'Samsung Washing Machine Repair', description: 'Expert solutions for 4E, 5E, and dE errors, EcoBubble pump replacement, spin cycle vibration, and control board repairs.', iconType: 'washing-machine' },
@@ -161,16 +161,16 @@ export const brands: BrandData[] = [
   {
     slug: 'whirlpool',
     name: 'Whirlpool',
-    title: 'Whirlpool Appliance Repair & Service in Delhi NCR',
+    title: 'Whirlpool Appliance Repair & Service in India',
     tagline: 'Reliable Doorstep Support for Whirlpool 6th Sense Appliances & IntelliFresh Fridges',
     heroImage: '/images/brands/whirlpool/whirlpool-hero-1.webp',
     heroImages: [
       { src: '/images/brands/whirlpool/whirlpool-hero-1.webp', alt: 'Whirlpool technician repairing 360 BloomWash washing machine drum mechanism in Indian home', tagline: '360 BloomWash Drum Overhaul' },
       { src: '/images/brands/whirlpool/whirlpool-hero-2.webp', alt: 'Whirlpool service engineer checking IntelliFresh refrigerator compressor and thermostat', tagline: 'IntelliFresh Refrigerator Diagnostics' },
-      { src: '/images/brands/whirlpool/whirlpool-hero-3.webp', alt: 'AC specialist servicing Whirlpool 3D Cool Inverter split AC indoor unit in Delhi NCR', tagline: '3D Cool Inverter AC Servicing' },
+      { src: '/images/brands/whirlpool/whirlpool-hero-3.webp', alt: 'AC specialist servicing Whirlpool 3D Cool Inverter split AC indoor unit in India', tagline: '3D Cool Inverter AC Servicing' },
       { src: '/images/brands/whirlpool/whirlpool-hero-4.webp', alt: 'Television engineer testing display panel and power board on smart TV in living room', tagline: 'Smart TV Motherboard Repairs' }
     ],
-    description: 'Professional out-of-warranty repair for Whirlpool refrigerators, washing machines, 3D Cool air conditioners, and microwaves across Delhi NCR.',
+    description: 'Professional out-of-warranty repair for Whirlpool refrigerators, washing machines, 3D Cool air conditioners, and microwaves across India.',
     overviewParagraphs: [
       'Whirlpool appliances feature 6th Sense® intelligent sensor technology, designed to dynamically adjust power, water levels, and cooling temperatures. When component failure disrupts this automated balance, specialized diagnostic testing is necessary.',
       'Our team specializes in Whirlpool IntelliFresh inverter refrigerators, BloomWash washing machines, and 3D Cool split air conditioners. We carry genuine-grade replacement relays, thermostat sensors, drain valves, and control micro-circuits.',
@@ -183,7 +183,7 @@ export const brands: BrandData[] = [
       'Whirlpool 3D Cool & Magicool Inverter ACs',
       'Whirlpool Magicook & Jet Cuisine Microwaves'
     ],
-    seoTitle: 'Whirlpool Appliance Repair in Delhi NCR | Customer Care',
+    seoTitle: 'Whirlpool Appliance Repair in India | Customer Care',
     seoDescription: 'Reliable Whirlpool appliance repair in Delhi, Noida, Gurugram & Faridabad. Expert doorstep service for Whirlpool Washing Machines, Fridges & ACs. Call now!',
     services: [
       { name: 'Whirlpool Washing Machine Repair', description: 'Fixing agitator issues, spin bowl imbalance, water intake solenoid errors, and electronic control cards.', iconType: 'washing-machine' },
@@ -213,7 +213,7 @@ export const brands: BrandData[] = [
   {
     slug: 'bosch',
     name: 'Bosch',
-    title: 'Bosch Appliance Repair & Service Support in Delhi NCR',
+    title: 'Bosch Appliance Repair & Service Support in India',
     tagline: 'Premium Precision Service for German-Engineered Bosch Home Appliances',
     heroImage: '/images/brands/bosch/bosch-hero-1.webp',
     heroImages: [
@@ -222,11 +222,11 @@ export const brands: BrandData[] = [
       { src: '/images/brands/bosch/bosch-hero-3.webp', alt: 'HVAC technician maintaining split air conditioning unit in Gurgaon residence', tagline: 'Climate Control Inverter Service' },
       { src: '/images/brands/bosch/bosch-hero-4.webp', alt: 'Display technician troubleshooting television motherboard and backlight circuits', tagline: 'Electronics Circuit Diagnostics' }
     ],
-    description: 'Specialized independent repair for Bosch front-load washing machines, VarioInverter refrigerators, dishwashers, and ovens across Delhi NCR.',
+    description: 'Specialized independent repair for Bosch front-load washing machines, VarioInverter refrigerators, dishwashers, and ovens across India.',
     overviewParagraphs: [
       'German engineering demands precision diagnostics. Bosch appliances—equipped with EcoSilence Drive™ brushless motors, AntiVibration™ sidewalls, and ActiveWater Plus sensors—require meticulous attention to mechanical tolerances and electronic calibration.',
       'Our senior engineers possess deep technical knowledge of Bosch Series 4, Series 6, and Series 8 appliances. We address complex PCB error codes (E18, E23, F21), motor driver circuits, and water level pressure transducers.',
-      'Get premium, white-glove doorstep service for your Bosch appliances in Delhi NCR with complete transparency, detailed diagnostic explanations, and guaranteed workmanship.'
+      'Get premium, white-glove doorstep service for your Bosch appliances in India with complete transparency, detailed diagnostic explanations, and guaranteed workmanship.'
     ],
     supportedModels: [
       'Bosch Serie 4, Serie 6 & Serie 8 Front Load Washers',
@@ -235,8 +235,8 @@ export const brands: BrandData[] = [
       'Bosch Built-in & Freestanding Dishwashers',
       'Bosch Serie 6 Convection Microwave Ovens'
     ],
-    seoTitle: 'Bosch Appliance Repair in Delhi NCR | Customer Care',
-    seoDescription: 'Specialized Bosch appliance repair in Delhi NCR. Expert technicians for Bosch Front Load Washing Machines & Refrigerators. Book your doorstep repair today!',
+    seoTitle: 'Bosch Appliance Repair in India | Customer Care',
+    seoDescription: 'Specialized Bosch appliance repair in India. Expert technicians for Bosch Front Load Washing Machines & Refrigerators. Book your doorstep repair today!',
     services: [
       { name: 'Bosch Washing Machine Repair', description: 'Resolving E18 drainage errors, E23 leak protection faults, drum bearing replacements, and door seal gasket changes.', iconType: 'washing-machine' },
       { name: 'Bosch Refrigerator Service', description: 'VarioInverter compressor repairs, multi-airflow damper diagnostics, and electronic sensor replacements.', iconType: 'refrigerator' },
@@ -265,7 +265,7 @@ export const brands: BrandData[] = [
   {
     slug: 'ifb',
     name: 'IFB',
-    title: 'IFB Appliance Repair & Service Support in Delhi NCR',
+    title: 'IFB Appliance Repair & Service Support in India',
     tagline: 'Dedicated Doorstep Specialists for IFB Senator, Executive & FastCool Appliances',
     heroImage: '/images/brands/ifb/ifb-hero-1.webp',
     heroImages: [
@@ -274,7 +274,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/ifb/ifb-hero-3.webp', alt: 'HVAC engineer servicing IFB FastCool split AC outdoor condenser with manifold gauges', tagline: 'FastCool Inverter AC Maintenance' },
       { src: '/images/brands/ifb/ifb-hero-4.webp', alt: 'Electronics specialist testing television circuit board and internal power components', tagline: 'Electronics Motherboard Repair' }
     ],
-    description: 'Expert out-of-warranty repair for IFB front-load washing machines, top-loaders, microwave ovens, and FastCool air conditioners in Delhi NCR.',
+    description: 'Expert out-of-warranty repair for IFB front-load washing machines, top-loaders, microwave ovens, and FastCool air conditioners in India.',
     overviewParagraphs: [
       'IFB is a household staple in India known for heavy-duty front-load washing machines with Aqua Energie filter systems, CradleWash programs, and 3D Warm Soak technology. Keeping these systems running smoothly requires experienced technicians who understand IFB mechanical assemblies.',
       'We repair drum suspension mounts, spider arm shafts, digital program selector knobs, and heating elements for all popular IFB series including Senator, Executive, and Elena.',
@@ -286,7 +286,7 @@ export const brands: BrandData[] = [
       'IFB FastCool & Gold Series Inverter ACs',
       'IFB 30L & 25L Convection Microwave Ovens'
     ],
-    seoTitle: 'IFB Appliance Repair & Service in Delhi NCR | Customer Care',
+    seoTitle: 'IFB Appliance Repair & Service in India | Customer Care',
     seoDescription: 'Expert IFB appliance repair across Delhi, Noida & Gurugram. Fast doorstep service for IFB Front Load Washing Machines, Microwaves & ACs. Call us today!',
     services: [
       { name: 'IFB Washing Machine Repair', description: 'Fixing drum shaking, door error codes, heating coil scale buildup, and program selector PCB faults.', iconType: 'washing-machine' },
@@ -300,7 +300,7 @@ export const brands: BrandData[] = [
     ],
     faqs: [
       { q: 'Do you specialize in IFB Front Load Washers?', a: 'Yes. IFB front-loaders are one of our core specialties. We handle drum overhauls, spider arms, and PCB repairs daily.' },
-      { q: 'How quickly can I get an IFB technician in Delhi NCR?', a: 'We schedule technician visits within 30 to 60 minutes of booking confirmation across all NCR sectors.' }
+      { q: 'How quickly can I get an IFB technician in India?', a: 'We schedule technician visits within 30 to 60 minutes of booking confirmation across all NCR sectors.' }
     ],
     gallery: [
       { src: '/images/brands/ifb/ifb-gallery-1.webp', alt: 'Technician replacing drum bearing on IFB Senator front-load washing machine in Indian utility room', title: 'IFB Senator Drum Overhaul', category: 'Washing Machine' },
@@ -314,7 +314,7 @@ export const brands: BrandData[] = [
   {
     slug: 'haier',
     name: 'Haier',
-    title: 'Haier Appliance Repair & Service Support in Delhi NCR',
+    title: 'Haier Appliance Repair & Service Support in India',
     tagline: 'Reliable Doorstep Support for Haier Bottom-Mounted Fridges & Inverter ACs',
     heroImage: '/images/brands/haier/haier-hero-1.webp',
     heroImages: [
@@ -323,7 +323,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/haier/haier-hero-3.webp', alt: 'HVAC engineer servicing Haier Triple Inverter split air conditioner in Delhi home', tagline: 'Triple Inverter Split AC Care' },
       { src: '/images/brands/haier/haier-hero-4.webp', alt: 'Electronics specialist testing smart TV motherboard and display backlight circuits', tagline: 'Smart Android TV Diagnostics' }
     ],
-    description: 'Prompt out-of-warranty service for Haier refrigerators, Direct Motion washing machines, inverter air conditioners, and LED TVs across Delhi NCR.',
+    description: 'Prompt out-of-warranty service for Haier refrigerators, Direct Motion washing machines, inverter air conditioners, and LED TVs across India.',
     overviewParagraphs: [
       'Haier appliances are recognized for user-centric innovations, such as 8-in-1 convertible Bottom Mounted Refrigerators (BMR), Direct Motion motor washing machines, and Self-Clean inverter split ACs.',
       'Our independent service technicians specialize in repairing Haier inverter PCB boards, dual-fan cooling ducts, electronic defrost timers, and drain solenoid assemblies.',
@@ -335,8 +335,8 @@ export const brands: BrandData[] = [
       'Haier Triple Inverter & Self-Clean Split ACs',
       'Haier Smart LED & 4K Android TVs'
     ],
-    seoTitle: 'Haier Appliance Repair in Delhi NCR | Customer Care',
-    seoDescription: 'Professional Haier appliance repair in Delhi NCR. Doorstep technician service for Haier Refrigerators, Washing Machines & ACs. Book your service visit now!',
+    seoTitle: 'Haier Appliance Repair in India | Customer Care',
+    seoDescription: 'Professional Haier appliance repair in India. Doorstep technician service for Haier Refrigerators, Washing Machines & ACs. Book your service visit now!',
     services: [
       { name: 'Haier Refrigerator Service', description: 'BMR cooling balance, defrost fan repairs, compressor replacement, and refrigerant charging.', iconType: 'refrigerator' },
       { name: 'Haier Washing Machine Repair', description: 'Direct Motion motor diagnostics, spin cycle error fixes, and water inlet valve repairs.', iconType: 'washing-machine' },
@@ -350,7 +350,7 @@ export const brands: BrandData[] = [
     ],
     faqs: [
       { q: 'Do you service Haier Bottom-Mounted Refrigerators?', a: 'Yes. We repair all Haier BMR and multi-door refrigerator cooling systems and inverter control boards.' },
-      { q: 'What areas in Delhi NCR do you cover for Haier repair?', a: 'We cover Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, and Gurugram.' }
+      { q: 'What areas in India do you cover for Haier repair?', a: 'We cover Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, and Gurugram.' }
     ],
     gallery: [
       { src: '/images/brands/haier/haier-gallery-1.webp', alt: 'Technician testing Direct Motion motor and drum in Haier front load washing machine', title: 'Haier Direct Motion Washer Service', category: 'Washing Machine' },
@@ -364,7 +364,7 @@ export const brands: BrandData[] = [
   {
     slug: 'hitachi',
     name: 'Hitachi',
-    title: 'Hitachi Appliance Repair & Service in Delhi NCR',
+    title: 'Hitachi Appliance Repair & Service in India',
     tagline: 'High-End Precision Diagnostics for Hitachi Inverter ACs & French Door Refrigerators',
     heroImage: '/images/brands/hitachi/hitachi-hero-1.webp',
     heroImages: [
@@ -373,7 +373,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/hitachi/hitachi-hero-3.webp', alt: 'HVAC technician measuring refrigerant pressures on Hitachi inverter outdoor condenser', tagline: 'Inverter Gas Calibration & Brazing' },
       { src: '/images/brands/hitachi/hitachi-hero-4.webp', alt: 'Display technician repairing motherboard circuit board on high-definition smart television', tagline: 'Smart TV Electronics Diagnostics' }
     ],
-    description: 'Expert independent repair for premium Hitachi split/window air conditioners and multi-door French door refrigerators in Delhi NCR.',
+    description: 'Expert independent repair for premium Hitachi split/window air conditioners and multi-door French door refrigerators in India.',
     overviewParagraphs: [
       'Hitachi air conditioners and refrigerators represent top-tier Japanese climate control technology, featuring Expandable Tropical Inverters, FrostWash systems, and vacuum-insulated multi-compartment refrigerators.',
       'Servicing these sophisticated systems requires precision electronic testing tools and deep familiarity with Hitachi micro-controller circuitry and high-pressure refrigeration cycles.',
@@ -385,7 +385,7 @@ export const brands: BrandData[] = [
       'Hitachi French Door & Big French Refrigerators',
       'Hitachi Solfege Series Multi-Door Refrigerators'
     ],
-    seoTitle: 'Hitachi Appliance Repair in Delhi NCR | Customer Care',
+    seoTitle: 'Hitachi Appliance Repair in India | Customer Care',
     seoDescription: 'Specialized Hitachi AC and Refrigerator repair in Delhi, Gurugram & Noida. Expert doorstep technicians for high-end Hitachi appliances. Call our helpline!',
     services: [
       { name: 'Hitachi Air Conditioner Repair', description: 'Tropical Inverter PCB repair, blower motor fixes, coil leak brazing, and gas recharging.', iconType: 'ac' },
@@ -405,13 +405,13 @@ export const brands: BrandData[] = [
       { src: '/images/brands/hitachi/hitachi-gallery-3.webp', alt: 'Technician checking refrigerant pressure and airflow on indoor split AC unit in Gurugram', title: 'Hitachi AC Gas Top-up & Calibration', category: 'Air Conditioner' },
       { src: '/images/brands/hitachi/hitachi-gallery-4.webp', alt: 'Electronics specialist troubleshooting high-voltage appliance circuit boards', title: 'Hitachi Control PCB Diagnostics', category: 'Electronics' },
       { src: '/images/brands/hitachi/hitachi-gallery-5.webp', alt: 'Television technician testing motherboard circuits and video display connectors', title: 'Display Circuit Diagnostics', category: 'Television' },
-      { src: '/images/brands/hitachi/hitachi-gallery-6.webp', alt: 'Customer satisfaction handover following premium Hitachi appliance service in Delhi NCR', title: 'Hitachi Premium Support Guarantee', category: 'Service Guarantee' }
+      { src: '/images/brands/hitachi/hitachi-gallery-6.webp', alt: 'Customer satisfaction handover following premium Hitachi appliance service in India', title: 'Hitachi Premium Support Guarantee', category: 'Service Guarantee' }
     ]
   },
   {
     slug: 'godrej',
     name: 'Godrej',
-    title: 'Godrej Appliance Repair & Service in Delhi NCR',
+    title: 'Godrej Appliance Repair & Service in India',
     tagline: 'Trusted Doorstep Support for Godrej Edge, Eon & Inverter Appliances',
     heroImage: '/images/brands/godrej/godrej-hero-1.webp',
     heroImages: [
@@ -420,7 +420,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/godrej/godrej-hero-3.webp', alt: 'HVAC specialist servicing Godrej Green Balance Inverter AC unit in Faridabad', tagline: 'Green Balance AC Servicing' },
       { src: '/images/brands/godrej/godrej-hero-4.webp', alt: 'Electronics specialist repairing smart TV power circuit and motherboard components', tagline: 'Smart TV Power Board Diagnostics' }
     ],
-    description: 'Affordable, reliable out-of-warranty repair for Godrej refrigerators, washing machines, and air conditioners across Delhi NCR.',
+    description: 'Affordable, reliable out-of-warranty repair for Godrej refrigerators, washing machines, and air conditioners across India.',
     overviewParagraphs: [
       'Godrej appliances have earned decades of trust in Indian homes. From energy-efficient Edge Pro direct-cool refrigerators to Eon Allure washing machines and green inverter air conditioners, Godrej appliances are built for durability.',
       'We provide fast, transparent doorstep repair services for all Godrej models, replacing worn thermostats, gas relays, drain valves, and wash motors with genuine-grade parts.',
@@ -432,8 +432,8 @@ export const brands: BrandData[] = [
       'Godrej Eon Allure & WT Eon Washers',
       'Godrej Green Balance & Turbo Inverter ACs'
     ],
-    seoTitle: 'Godrej Appliance Repair in Delhi NCR | Customer Care',
-    seoDescription: 'Trusted Godrej appliance repair in Delhi NCR. Affordable doorstep service for Godrej Refrigerators, Washing Machines & ACs. Book your expert visit today!',
+    seoTitle: 'Godrej Appliance Repair in India | Customer Care',
+    seoDescription: 'Trusted Godrej appliance repair in India. Affordable doorstep service for Godrej Refrigerators, Washing Machines & ACs. Book your expert visit today!',
     services: [
       { name: 'Godrej Refrigerator Service', description: 'Thermostat replacement, gas refilling, relay/OLP replacement, and door gasket sealing.', iconType: 'refrigerator' },
       { name: 'Godrej Washing Machine Repair', description: 'Fixing drum rotation issues, pulsator repairs, drain choke removal, and timer switch replacements.', iconType: 'washing-machine' },
@@ -459,7 +459,7 @@ export const brands: BrandData[] = [
   {
     slug: 'sony',
     name: 'Sony',
-    title: 'Sony BRAVIA TV Repair & Service in Delhi NCR',
+    title: 'Sony BRAVIA TV Repair & Service in India',
     tagline: 'Precision Electronics Diagnosis for Sony BRAVIA OLED, 4K HDR & Google TVs',
     heroImage: '/images/brands/sony/sony-hero-1.webp',
     heroImages: [
@@ -468,11 +468,11 @@ export const brands: BrandData[] = [
       { src: '/images/brands/sony/sony-hero-3.webp', alt: 'Electronics engineer repairing Sony TV HDMI ports and Acoustic Surface audio circuits', tagline: 'Acoustic Surface Audio Diagnostics' },
       { src: '/images/brands/sony/sony-hero-4.webp', alt: 'HVAC technician testing inverter cooling circuit in modern Indian apartment', tagline: 'Precision Inverter Electronics' }
     ],
-    description: 'Expert doorstep repair for Sony BRAVIA LED, OLED, 4K HDR, and Android Smart televisions across Delhi NCR.',
+    description: 'Expert doorstep repair for Sony BRAVIA LED, OLED, 4K HDR, and Android Smart televisions across India.',
     overviewParagraphs: [
       'Sony BRAVIA televisions are globally renowned for their visual fidelity, powered by Cognitive Processor XR™, Triluminos™ display panels, and Acoustic Surface Audio systems.',
       'When your Sony TV experiences power supply interruptions, six-time red light blinking codes, sound without picture, or motherboard software loops, you need a specialized micro-soldering and panel engineer.',
-      'Our team provides doorstep TV diagnostics across Delhi NCR, resolving power module faults, T-Con board timing errors, and LED backlight failures.'
+      'Our team provides doorstep TV diagnostics across India, resolving power module faults, T-Con board timing errors, and LED backlight failures.'
     ],
     supportedModels: [
       'Sony BRAVIA XR OLED & Master Series',
@@ -480,8 +480,8 @@ export const brands: BrandData[] = [
       'Sony BRAVIA Google & Android Smart TVs',
       'Sony Full Array LED & Mini LED Series'
     ],
-    seoTitle: 'Sony TV Repair & Service in Delhi NCR | Customer Care',
-    seoDescription: 'Expert Sony BRAVIA TV repair service in Delhi NCR. Doorstep diagnostics for Sony OLED, 4K HDR & LED TVs. Red light blinking & display fixes. Call us now!',
+    seoTitle: 'Sony TV Repair & Service in India | Customer Care',
+    seoDescription: 'Expert Sony BRAVIA TV repair service in India. Doorstep diagnostics for Sony OLED, 4K HDR & LED TVs. Red light blinking & display fixes. Call us now!',
     services: [
       { name: 'Sony BRAVIA Display Repair', description: 'Fixing horizontal lines on screen, ghosting, dark screen with audio, and LED backlight replacement.', iconType: 'tv' },
       { name: 'Sony Motherboard & Power Board Repair', description: 'Component-level micro-soldering, power supply module repair, and boot-loop recovery.', iconType: 'tv' },
@@ -508,7 +508,7 @@ export const brands: BrandData[] = [
   {
     slug: 'panasonic',
     name: 'Panasonic',
-    title: 'Panasonic Appliance Repair & Service in Delhi NCR',
+    title: 'Panasonic Appliance Repair & Service in India',
     tagline: 'Expert Care for Panasonic MiraIE Smart ACs, Econavi Fridges & Washers',
     heroImage: '/images/brands/panasonic/panasonic-hero-1.webp',
     heroImages: [
@@ -517,7 +517,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/panasonic/panasonic-hero-3.webp', alt: 'Specialist inspecting Panasonic Econavi refrigerator inverter compressor and sensors', tagline: 'Econavi Inverter Refrigerator Care' },
       { src: '/images/brands/panasonic/panasonic-hero-4.webp', alt: 'Television technician testing Panasonic 4K Smart TV display panel and motherboard', tagline: 'Panasonic 4K TV Diagnostics' }
     ],
-    description: 'Professional out-of-warranty support for Panasonic inverter air conditioners, washing machines, microwaves, and Smart TVs in Delhi NCR.',
+    description: 'Professional out-of-warranty support for Panasonic inverter air conditioners, washing machines, microwaves, and Smart TVs in India.',
     overviewParagraphs: [
       'Panasonic home appliances blend Japanese reliability with smart connectivity, such as MiraIE IoT-enabled air conditioners, Econavi sensor-equipped refrigerators, and StainMaster washing machines.',
       'Our technicians are proficient in handling Panasonic micro-controller circuit boards, inverter motor drives, and electronic expansion valves.',
@@ -530,8 +530,8 @@ export const brands: BrandData[] = [
       'Panasonic Convection & Grill Microwave Ovens',
       'Panasonic 4K Smart Android TVs'
     ],
-    seoTitle: 'Panasonic Appliance Repair in Delhi NCR | Customer Care',
-    seoDescription: 'Professional Panasonic appliance repair in Delhi NCR. Doorstep service for Panasonic Air Conditioners, Washing Machines & Microwaves. Book your visit now!',
+    seoTitle: 'Panasonic Appliance Repair in India | Customer Care',
+    seoDescription: 'Professional Panasonic appliance repair in India. Doorstep service for Panasonic Air Conditioners, Washing Machines & Microwaves. Book your visit now!',
     services: [
       { name: 'Panasonic Air Conditioner Repair', description: 'MiraIE PCB repair, indoor coil chemical washing, gas refilling, and compressor diagnostics.', iconType: 'ac' },
       { name: 'Panasonic Washing Machine Repair', description: 'StainMaster heater circuit repair, drum bearing replacement, and water drain valve fixes.', iconType: 'washing-machine' },
@@ -551,13 +551,13 @@ export const brands: BrandData[] = [
       { src: '/images/brands/panasonic/panasonic-gallery-3.webp', alt: 'Specialist inspecting Panasonic Econavi Prime Fresh refrigerator inverter compressor', title: 'Panasonic Econavi Refrigerator Service', category: 'Refrigerator' },
       { src: '/images/brands/panasonic/panasonic-gallery-4.webp', alt: 'Technician repairing Panasonic convection microwave touchpad and magnetron on test bench', title: 'Panasonic Microwave Repair', category: 'Microwave' },
       { src: '/images/brands/panasonic/panasonic-gallery-5.webp', alt: 'Television engineer testing Panasonic 4K Smart TV display panel and motherboard', title: 'Panasonic 4K TV Diagnostics', category: 'Television' },
-      { src: '/images/brands/panasonic/panasonic-gallery-6.webp', alt: 'Homeowner in Delhi NCR smiling after successful repair of Panasonic appliances', title: 'Panasonic Doorstep Assurance', category: 'Service Guarantee' }
+      { src: '/images/brands/panasonic/panasonic-gallery-6.webp', alt: 'Homeowner in India smiling after successful repair of Panasonic appliances', title: 'Panasonic Doorstep Assurance', category: 'Service Guarantee' }
     ]
   },
   {
     slug: 'sharp',
     name: 'Sharp',
-    title: 'Sharp Appliance & TV Repair in Delhi NCR',
+    title: 'Sharp Appliance & TV Repair in India',
     tagline: 'Specialized Service for Sharp J-Tech Inverter Fridges, Microwaves & Aquos TVs',
     heroImage: '/images/brands/sharp/sharp-hero-1.webp',
     heroImages: [
@@ -566,10 +566,10 @@ export const brands: BrandData[] = [
       { src: '/images/brands/sharp/sharp-hero-3.webp', alt: 'HVAC technician checking cooling lines on split air conditioner outdoor condenser unit', tagline: 'Residential AC Condenser Servicing' },
       { src: '/images/brands/sharp/sharp-hero-4.webp', alt: 'Television engineer testing Sharp Aquos 4K LED TV backlight and motherboard in living room', tagline: 'Sharp Aquos 4K TV Diagnostics' }
     ],
-    description: 'Precision out-of-warranty service for Sharp microwave ovens, J-Tech inverter refrigerators, and Aquos LED TVs in Delhi NCR.',
+    description: 'Precision out-of-warranty service for Sharp microwave ovens, J-Tech inverter refrigerators, and Aquos LED TVs in India.',
     overviewParagraphs: [
       'Sharp is known worldwide for its pioneer microwave ovens, Plasmacluster ion air purifiers, J-Tech Inverter refrigeration systems, and Aquos LED displays.',
-      'Our skilled technicians provide dedicated doorstep diagnostic support for Sharp appliances across Delhi NCR, using specialized tools and genuine-grade replacement parts.',
+      'Our skilled technicians provide dedicated doorstep diagnostic support for Sharp appliances across India, using specialized tools and genuine-grade replacement parts.',
       'Fast, reliable, and transparent repair solutions with a 30-day service warranty.'
     ],
     supportedModels: [
@@ -577,7 +577,7 @@ export const brands: BrandData[] = [
       'Sharp J-Tech Inverter Multi-Door Refrigerators',
       'Sharp Aquos 4K LED & Smart TVs'
     ],
-    seoTitle: 'Sharp Appliance & TV Repair in Delhi NCR | Customer Care',
+    seoTitle: 'Sharp Appliance & TV Repair in India | Customer Care',
     seoDescription: 'Expert Sharp appliance repair across Delhi, Noida & Gurugram. Doorstep service for Sharp Microwave Ovens, Refrigerators & Aquos TVs. Call our team today!',
     services: [
       { name: 'Sharp Microwave Oven Repair', description: 'Specialized magnetron replacement, turntable motor repair, keypad membrane fixes, and high-voltage repairs.', iconType: 'microwave' },
@@ -603,7 +603,7 @@ export const brands: BrandData[] = [
   {
     slug: 'marq',
     name: 'Marq',
-    title: 'Marq Appliance Repair & Service Support in Delhi NCR',
+    title: 'Marq Appliance Repair & Service Support in India',
     tagline: 'Affordable Doorstep Service for Marq Inverter ACs, Washing Machines & Smart TVs',
     heroImage: '/images/brands/marq/marq-hero-1.webp',
     heroImages: [
@@ -612,7 +612,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/marq/marq-hero-3.webp', alt: 'HVAC engineer servicing residential air conditioning outdoor condenser in Gurgaon', tagline: 'Outdoor AC Condenser Maintenance' },
       { src: '/images/brands/marq/marq-hero-4.webp', alt: 'Display specialist testing smart TV motherboard and Android OS processor board', tagline: 'Smart TV Motherboard Diagnostics' }
     ],
-    description: 'Reliable, affordable out-of-warranty doorstep repair for Marq (by Flipkart) air conditioners, washing machines, and Smart TVs in Delhi NCR.',
+    description: 'Reliable, affordable out-of-warranty doorstep repair for Marq (by Flipkart) air conditioners, washing machines, and Smart TVs in India.',
     overviewParagraphs: [
       'Marq by Flipkart provides value-packed appliances for Indian homes. When your Marq split AC, semi/fully-automatic washing machine, or Android TV develops an issue, our technicians deliver prompt and cost-effective repair solutions.',
       'We troubleshoot control boards, motor capacitors, drain pumps, and cooling circuits to restore your appliances to top shape without excessive costs.',
@@ -623,8 +623,8 @@ export const brands: BrandData[] = [
       'Marq 4-in-1 Convertible Inverter Split ACs',
       'Marq Smart Android LED TVs (32" to 55")'
     ],
-    seoTitle: 'Marq Appliance Repair & Service in Delhi NCR | Customer Care',
-    seoDescription: 'Fast & affordable Marq appliance repair across Delhi NCR. Doorstep technician service for Marq ACs, Washing Machines & Smart TVs. Book your service today!',
+    seoTitle: 'Marq Appliance Repair & Service in India | Customer Care',
+    seoDescription: 'Fast & affordable Marq appliance repair across India. Doorstep technician service for Marq ACs, Washing Machines & Smart TVs. Book your service today!',
     services: [
       { name: 'Marq Air Conditioner Repair', description: 'Inverter PCB troubleshooting, copper coil leak testing, gas refilling, and deep chemical cleaning.', iconType: 'ac' },
       { name: 'Marq Washing Machine Repair', description: 'Fixing drain motor failures, water level sensor errors, and agitator belt replacements.', iconType: 'washing-machine' },
@@ -635,7 +635,7 @@ export const brands: BrandData[] = [
       { title: 'Washing Machine Not Spinning', description: 'Replacing broken drive belts and testing spin motor capacitors.' }
     ],
     faqs: [
-      { q: 'Do you provide doorstep repair for Marq appliances?', a: 'Yes. We provide full doorstep repair for Marq ACs, washing machines, and TVs across Delhi NCR.' },
+      { q: 'Do you provide doorstep repair for Marq appliances?', a: 'Yes. We provide full doorstep repair for Marq ACs, washing machines, and TVs across India.' },
       { q: 'How do I book a Marq repair technician?', a: 'Simply call our customer care number at +91 8008070025 or click "Book a Service" on this page.' }
     ],
     gallery: [
@@ -644,7 +644,7 @@ export const brands: BrandData[] = [
       { src: '/images/brands/marq/marq-gallery-3.webp', alt: 'AC technician checking cooling performance on residential outdoor AC condenser unit', title: 'Outdoor AC Condenser Service', category: 'Air Conditioner' },
       { src: '/images/brands/marq/marq-gallery-4.webp', alt: 'Television specialist testing display and Android OS boot board on Marq 4K TV', title: 'Marq Smart Android TV Repair', category: 'Television' },
       { src: '/images/brands/marq/marq-gallery-5.webp', alt: 'Electronics technician testing power supply and board circuits for domestic appliances', title: 'Motherboard Circuit Testing', category: 'Electronics' },
-      { src: '/images/brands/marq/marq-gallery-6.webp', alt: 'Happy customer family in Delhi NCR after prompt doorstep repair of Marq appliance', title: 'Marq Fast Doorstep Assistance', category: 'Service Guarantee' }
+      { src: '/images/brands/marq/marq-gallery-6.webp', alt: 'Happy customer family in India after prompt doorstep repair of Marq appliance', title: 'Marq Fast Doorstep Assistance', category: 'Service Guarantee' }
     ]
   }
 ];

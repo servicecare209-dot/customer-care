@@ -21,7 +21,7 @@ export default function BrandServiceGrid({ brand }: { brand: BrandData }) {
             Supported <span className="text-primary-navy">{brand.name}</span> Appliances
           </h2>
           <p className="text-gray-600 text-lg">
-            Our specialized technicians are highly trained in servicing the full range of {brand.name} home appliances across Delhi NCR.
+            Our specialized technicians are highly trained in servicing the full range of {brand.name} home appliances across India.
           </p>
         </div>
 

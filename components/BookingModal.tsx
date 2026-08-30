@@ -179,7 +179,7 @@ export default function BookingModal() {
         `*Email:* ${data.email}`,
         `*Address:* ${data.address}`,
         `----------------------------------------`,
-        `_Source: Customer Care Delhi NCR Website_`,
+        `_Source: Customer Care India Website_`,
       ].join('\n');
 
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
@@ -236,7 +236,7 @@ export default function BookingModal() {
                     </h3>
                     <p className="text-[10px] sm:text-[11px] text-blue-100/85 flex items-center gap-1 font-normal">
                       <Clock size={10} className="text-accent-red shrink-0" />
-                      <span>30-min callback in Delhi NCR</span>
+                      <span>30-min callback in India</span>
                     </p>
                   </div>
                 </div>
@@ -470,7 +470,7 @@ export default function BookingModal() {
                   {/* Service Locality / Address */}
                   <div>
                     <label className="block text-[10px] sm:text-[11px] font-bold text-gray-600 uppercase tracking-wider mb-1">
-                      Service Address in Delhi NCR *
+                      Service Address in India *
                     </label>
                     <input
                       type="text"

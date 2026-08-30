@@ -106,7 +106,7 @@ export default function BrandHero({ brand }: { brand: BrandData }) {
             {/* Top Brand Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-xs tracking-wider uppercase mb-4 shadow-sm">
               <Sparkles size={13} className="text-accent-red" />
-              <span>Independent {brand.name} Support • Delhi NCR</span>
+              <span>Independent {brand.name} Support • India</span>
             </div>
             
             {/* Single H1 Tag */}

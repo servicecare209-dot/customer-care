@@ -8,7 +8,7 @@ import { ArrowLeft, ShieldCheck, Wrench, Clock, Award, Users, CheckCircle2, Phon
 
 export const metadata: Metadata = {
   title: 'About Us | Customer Care Home Appliance Support',
-  description: 'Learn about Customer Care - India\'s premier independent out-of-warranty appliance repair service delivering fast doorstep assistance across Delhi NCR.',
+  description: 'Learn about Customer Care - India\'s premier independent out-of-warranty appliance repair service delivering fast doorstep assistance across India.',
 };
 
 export default function AboutPage() {
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 About Customer Care
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-navy tracking-tight leading-tight">
-                Reliable Doorstep Appliance Repair Across <span className="text-accent-red">Delhi NCR</span>
+                Reliable Doorstep Appliance Repair Across <span className="text-accent-red">India</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Founded with a mission to eliminate the frustration of appliance breakdowns, <strong>Customer Care</strong> provides dependable, professional, and rapid out-of-warranty repair services directly at your home.
@@ -123,19 +123,21 @@ export default function AboutPage() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                  Extensive Delhi NCR Operational Network
+                  Extensive Pan-India Operational Network
                 </h2>
                 <p className="text-blue-100 leading-relaxed mb-6">
                   Our network of certified technicians is strategically distributed across major hubs to ensure rapid doorstep dispatch within 30 minutes.
                 </p>
                 <div className="grid grid-cols-2 gap-3 text-sm font-semibold">
                   {[
-                    'Central & South Delhi',
+                    'Bangalore & Mumbai',
+                    'Hyderabad & Lucknow',
                     'Noida & Greater Noida',
                     'Gurugram (Gurgaon)',
                     'Ghaziabad & Indirapuram',
-                    'Faridabad',
-                    'Sonipat & Kundli',
+                    'Faridabad & Gr. Faridabad',
+                    'East & West Delhi',
+                    'South & Central Delhi',
                   ].map((city) => (
                     <div key={city} className="flex items-center gap-2">
                       <CheckCircle2 size={18} className="text-accent-red shrink-0" />

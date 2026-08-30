@@ -102,7 +102,7 @@ export default function ContactPage() {
               We&apos;re Here to Help You
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Have a query or need fast doorstep appliance repair in Delhi NCR? Reach out via phone, email, or send us a message below.
+              Have a query or need fast doorstep appliance repair in India? Reach out via phone, email, or send us a message below.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default function ContactPage() {
                   >
                     +91 8008070025
                   </a>
-                  <p className="text-xs text-gray-500 mt-1">Prompt 30-min callback across Delhi NCR</p>
+                  <p className="text-xs text-gray-500 mt-1">Prompt 30-min callback across India</p>
                 </div>
               </div>
 
@@ -305,7 +305,7 @@ export default function ContactPage() {
                   {/* Address */}
                   <div>
                     <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                      Locality / Address in Delhi NCR *
+                      Locality / Address in India *
                     </label>
                     <textarea
                       rows={3}

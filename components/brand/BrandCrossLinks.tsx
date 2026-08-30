@@ -19,7 +19,7 @@ export default function BrandCrossLinks({ currentBrand }: { currentBrand: BrandD
             Explore Other <span className="text-primary-navy">Appliance Brands</span> We Service
           </h2>
           <p className="text-gray-600 text-base">
-            In addition to {currentBrand.name}, our certified technicians provide prompt doorstep diagnostics and out-of-warranty repair for all leading home appliance manufacturers across Delhi NCR.
+            In addition to {currentBrand.name}, our certified technicians provide prompt doorstep diagnostics and out-of-warranty repair for all leading home appliance manufacturers across India.
           </p>
         </div>
 

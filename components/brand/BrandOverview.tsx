@@ -98,7 +98,7 @@ export default function BrandOverview({ brand }: { brand: BrandData }) {
                 `Specialized diagnostic experience with ${brand.name} electronics`,
                 'Upfront pricing with transparent written quotations',
                 'High-grade, genuine-compatible replacement spare parts',
-                'Rapid 30 to 60-minute doorstep arrival across Delhi NCR',
+                'Rapid 30 to 60-minute doorstep arrival across India',
                 'Convenient on-site repair at your home or office',
                 '30-Day warranty on all repairs and replaced components'
               ].map((item, i) => (
