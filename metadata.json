@@ -1,0 +1,8 @@
+{
+  "name": "1800 Customer Care Landing Page",
+  "description": "A premium landing page for an Indian home-appliance repair service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
