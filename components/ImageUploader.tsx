@@ -248,84 +248,17 @@ export default function ImageUploader({
     try {
       let finalResult: UploadResult | null = null;
 
-      // Tier 1: Try Direct Presigned PUT
-      try {
-        const response = await fetch('/api/get-upload-url', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fileName: selectedFile.name,
-            fileType: selectedFile.type,
-            fileSize: selectedFile.size,
-          }),
-        });
+      // Upload seamlessly via Server Upload (/api/upload-fallback) which saves to local public/uploads
+      setUploadStage('fallback-server');
+      setUploadProgress(50);
 
-        const data = await response.json();
-
-        if (!response.ok || !data.success) {
-          throw new Error(data.error || 'Failed to obtain presigned URL');
-        }
-
-        const { uploadUrl, fileKey, publicUrl, friendlyUrl, expiresIn } = data;
-
-        setUploadStage('uploading-b2');
-
-        // Direct Browser PUT
-        await new Promise<void>((resolve, reject) => {
-          const xhr = new XMLHttpRequest();
-          currentXhrRef.current = xhr;
-
-          xhr.upload.onprogress = (event) => {
-            if (event.lengthComputable) {
-              const pct = Math.round((event.loaded / event.total) * 90);
-              setUploadProgress(pct);
-            }
-          };
-
-          xhr.onload = () => {
-            currentXhrRef.current = null;
-            if (xhr.status >= 200 && xhr.status < 300) {
-              resolve();
-            } else {
-              reject(new Error(`Direct B2 PUT responded with status ${xhr.status}`));
-            }
-          };
-
-          xhr.onerror = () => {
-            currentXhrRef.current = null;
-            reject(new Error('Direct browser network error (CORS or Bucket mismatch)'));
-          };
-
-          xhr.onabort = () => {
-            currentXhrRef.current = null;
-            reject(new Error('Upload cancelled.'));
-          };
-
-          xhr.open('PUT', uploadUrl, true);
-          xhr.setRequestHeader('Content-Type', selectedFile.type);
-          xhr.send(selectedFile);
-        });
-
-        finalResult = {
-          uploadUrl,
-          fileKey,
-          publicUrl,
-          friendlyUrl,
-          expiresIn,
-          uploadMethod: 'direct-presigned',
-        };
-      } catch (tier1Error: any) {
-        console.warn('Tier 1 Direct Upload failed. Initiating Murphy-Law Tier 2 Server Fallback...', tier1Error);
-        
-        // Tier 2: Automatic Server Proxy Upload Fallback
-        const fallbackData = await executeServerFallbackUpload(selectedFile);
-        finalResult = {
-          fileKey: fallbackData.fileKey,
-          publicUrl: fallbackData.publicUrl,
-          friendlyUrl: fallbackData.friendlyUrl,
-          uploadMethod: 'server-proxy-fallback',
-        };
-      }
+      const fallbackData = await executeServerFallbackUpload(selectedFile);
+      finalResult = {
+        fileKey: fallbackData.fileKey,
+        publicUrl: fallbackData.publicUrl,
+        friendlyUrl: fallbackData.friendlyUrl,
+        uploadMethod: 'free-local-storage',
+      };
 
       if (!finalResult) {
         throw new Error('Upload could not be completed.');
@@ -400,7 +333,7 @@ export default function ImageUploader({
             </div>
             <div>
               <h2 className="text-lg font-bold text-gray-900 leading-tight">Upload Image &amp; Get Link</h2>
-              <p className="text-xs text-gray-500">Backblaze B2 Direct + Auto-Fallback Storage</p>
+              <p className="text-xs text-emerald-600 font-medium">⚡ 100% Free Instant Storage (No Card Required)</p>
             </div>
           </div>
           <button
@@ -603,7 +536,7 @@ export default function ImageUploader({
               <div className="min-w-0 flex-1">
                 <h3 className="text-sm font-bold text-emerald-900">Image Uploaded Successfully!</h3>
                 <p className="text-xs text-emerald-700 mt-0.5">
-                  Link generated ({uploadResult.uploadMethod === 'server-proxy-fallback' ? 'Via Secure Fallback Proxy' : 'Via Direct S3'}).
+                  Link generated &amp; ready to use anywhere (100% Free - No Card Required).
                 </p>
               </div>
             </div>

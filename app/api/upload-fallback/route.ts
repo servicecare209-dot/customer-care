@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { uploadBufferDirectlyToB2, ALLOWED_IMAGE_TYPES, isValidImageType } from '@/lib/b2';
+import { ALLOWED_IMAGE_TYPES, isValidImageType } from '@/lib/b2';
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,40 +46,48 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Upload directly from server to B2
-    const uploadResult = await uploadBufferDirectlyToB2({
-      buffer,
-      fileName: file.name,
-      fileType,
-    });
+    // Ensure public/uploads directory exists
+    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    if (!fs.existsSync(uploadsDir)) {
+      fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+
+    // Generate safe file name
+    const ext = path.extname(file.name) || (fileType === 'image/png' ? '.png' : fileType === 'image/webp' ? '.webp' : '.jpg');
+    const baseName = path.basename(file.name, ext).replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 40) || 'image';
+    const uniqueFileName = `${Date.now()}-${uuidv4().slice(0, 8)}-${baseName}${ext}`;
+    const targetFilePath = path.join(uploadsDir, uniqueFileName);
+
+    // Save locally to public/uploads
+    await fs.promises.writeFile(targetFilePath, buffer);
+
+    // Determine base URL
+    const host = request.headers.get('host') || 'localhost:3000';
+    const protocol = request.headers.get('x-forwarded-proto') || 'http';
+    const origin = `${protocol}://${host}`;
+
+    const localRelativeUrl = `/uploads/${uniqueFileName}`;
+    const fullPublicUrl = `${origin}${localRelativeUrl}`;
 
     return NextResponse.json({
       success: true,
-      ...uploadResult,
-      message: 'Image uploaded successfully via fallback server proxy.',
+      fileKey: `uploads/${uniqueFileName}`,
+      publicUrl: fullPublicUrl,
+      friendlyUrl: localRelativeUrl,
+      contentType: fileType,
+      uploadMethod: 'free-local-storage',
+      message: 'Image uploaded and saved successfully (100% Free - No Card Required)!',
     });
   } catch (error: any) {
     console.error('[API /api/upload-fallback] Error:', error);
     
-    let userMessage = error.message || 'Server-side upload failed.';
-    let recommendation = '';
-
-    if (error.name === 'NoSuchBucket' || userMessage.includes('does not exist')) {
-      userMessage = `Backblaze B2 Bucket '${process.env.B2_BUCKET_NAME}' does not exist.`;
-      recommendation = 'Please check your B2_BUCKET_NAME in .env.local.';
-    } else if (error.name === 'InvalidAccessKeyId' || error.name === 'SignatureDoesNotMatch') {
-      userMessage = 'Invalid Backblaze B2 credentials.';
-      recommendation = 'Please verify B2_KEY_ID and B2_APPLICATION_KEY in .env.local.';
-    }
-
     return NextResponse.json(
       {
         success: false,
-        error: userMessage,
-        recommendation,
-        details: error.name,
+        error: error.message || 'Server-side upload failed.',
       },
       { status: 500 }
     );
   }
 }
+
