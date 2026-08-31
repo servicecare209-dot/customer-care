@@ -6,8 +6,7 @@
 import dotenv from 'dotenv';
 import { resolve } from 'path';
 
-// Load .env.local first, then fallback to .env
-dotenv.config({ path: resolve(process.cwd(), '.env.local') });
+// Load .env
 dotenv.config({ path: resolve(process.cwd(), '.env') });
 
 const BASE_URL = process.env.TEST_BASE_URL || 'http://localhost:3000';

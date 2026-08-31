@@ -62,7 +62,7 @@ export function getB2Client(): { client: S3Client; bucketName: string; endpoint:
   
   if (!keyId || !applicationKey || !bucketName) {
     throw new Error(
-      'Missing Backblaze B2 credentials in .env.local (B2_KEY_ID, B2_APPLICATION_KEY, or B2_BUCKET_NAME).'
+      'Missing Backblaze B2 credentials in .env (B2_KEY_ID, B2_APPLICATION_KEY, or B2_BUCKET_NAME).'
     );
   }
 
