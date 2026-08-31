@@ -13,10 +13,11 @@ import {
   FileImage,
   RefreshCw,
   ShieldCheck,
-  Code2,
   Image as ImageIcon,
   Trash2,
-  Sparkles
+  Sparkles,
+  Activity,
+  Wrench
 } from 'lucide-react';
 
 export interface UploadedMediaItem {
@@ -31,11 +32,12 @@ export interface UploadedMediaItem {
 }
 
 interface UploadResult {
-  uploadUrl: string;
+  uploadUrl?: string;
   fileKey: string;
   publicUrl: string;
   friendlyUrl: string;
-  expiresIn: number;
+  expiresIn?: number;
+  uploadMethod?: string;
 }
 
 interface ImageUploaderProps {
@@ -56,19 +58,23 @@ export default function ImageUploader({
   const [isDragging, setIsDragging] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
-  const [uploadStage, setUploadStage] = useState<'idle' | 'requesting-url' | 'uploading-b2' | 'completed' | 'error'>('idle');
+  const [uploadStage, setUploadStage] = useState<'idle' | 'requesting-url' | 'uploading-b2' | 'fallback-server' | 'completed' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [errorRecommendation, setErrorRecommendation] = useState<string | null>(null);
   const [uploadResult, setUploadResult] = useState<UploadResult | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
-  const [activeSnippetTab, setActiveSnippetTab] = useState<'next' | 'url' | 'html' | 'markdown'>('url');
+  const [activeSnippetTab, setActiveSnippetTab] = useState<'url' | 'next' | 'html' | 'markdown'>('url');
   
+  // Diagnostics
+  const [diagnosticRunning, setDiagnosticRunning] = useState(false);
+  const [diagnosticResult, setDiagnosticResult] = useState<any>(null);
+
   // Media library stored in localStorage
   const [mediaLibrary, setMediaLibrary] = useState<UploadedMediaItem[]>([]);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const currentXhrRef = useRef<XMLHttpRequest | null>(null);
 
-  // Load previously uploaded images from localStorage on mount
   useEffect(() => {
     try {
       const stored = localStorage.getItem('b2_uploaded_media');
@@ -120,6 +126,7 @@ export default function ImageUploader({
   const handleFileSelect = (file: File) => {
     cleanupPreview();
     setErrorMessage(null);
+    setErrorRecommendation(null);
     setUploadResult(null);
     setUploadProgress(0);
     setUploadStage('idle');
@@ -178,6 +185,7 @@ export default function ImageUploader({
     setPreviewUrl(null);
     setUploadResult(null);
     setErrorMessage(null);
+    setErrorRecommendation(null);
     setUploadProgress(0);
     setUploadStage('idle');
     if (fileInputRef.current) {
@@ -185,107 +193,156 @@ export default function ImageUploader({
     }
   };
 
+  // Run B2 Connection Diagnostic
+  const runDiagnostic = async () => {
+    setDiagnosticRunning(true);
+    setDiagnosticResult(null);
+    try {
+      const res = await fetch('/api/b2-diagnostic');
+      const data = await res.json();
+      setDiagnosticResult(data);
+    } catch (err: any) {
+      setDiagnosticResult({
+        connected: false,
+        error: err.message || 'Failed to contact diagnostic endpoint',
+      });
+    } finally {
+      setDiagnosticRunning(false);
+    }
+  };
+
+  // Tier 2: Server-Side Fallback Upload
+  const executeServerFallbackUpload = async (file: File) => {
+    setUploadStage('fallback-server');
+    setUploadProgress(60);
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const response = await fetch('/api/upload-fallback', {
+      method: 'POST',
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      const errMsg = data.error || `Server fallback failed with status ${response.status}`;
+      const errRec = data.recommendation || 'Check Backblaze B2 bucket settings in .env.local.';
+      throw { message: errMsg, recommendation: errRec };
+    }
+
+    return data;
+  };
+
+  // Main Upload Flow (Tier 1 with Auto-Failover to Tier 2)
   const handleUpload = async () => {
     if (!selectedFile) return;
 
     setIsUploading(true);
     setErrorMessage(null);
+    setErrorRecommendation(null);
     setUploadProgress(0);
     setUploadStage('requesting-url');
 
     try {
-      // Step 1: Request presigned PUT URL from our Next.js API route
-      const response = await fetch('/api/get-upload-url', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fileName: selectedFile.name,
-          fileType: selectedFile.type,
-          fileSize: selectedFile.size,
-        }),
-      });
+      let finalResult: UploadResult | null = null;
 
-      const data = await response.json();
+      // Tier 1: Try Direct Presigned PUT
+      try {
+        const response = await fetch('/api/get-upload-url', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fileName: selectedFile.name,
+            fileType: selectedFile.type,
+            fileSize: selectedFile.size,
+          }),
+        });
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || `Server returned ${response.status}: Failed to get upload authorization`);
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error(data.error || 'Failed to obtain presigned URL');
+        }
+
+        const { uploadUrl, fileKey, publicUrl, friendlyUrl, expiresIn } = data;
+
+        setUploadStage('uploading-b2');
+
+        // Direct Browser PUT
+        await new Promise<void>((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          currentXhrRef.current = xhr;
+
+          xhr.upload.onprogress = (event) => {
+            if (event.lengthComputable) {
+              const pct = Math.round((event.loaded / event.total) * 90);
+              setUploadProgress(pct);
+            }
+          };
+
+          xhr.onload = () => {
+            currentXhrRef.current = null;
+            if (xhr.status >= 200 && xhr.status < 300) {
+              resolve();
+            } else {
+              reject(new Error(`Direct B2 PUT responded with status ${xhr.status}`));
+            }
+          };
+
+          xhr.onerror = () => {
+            currentXhrRef.current = null;
+            reject(new Error('Direct browser network error (CORS or Bucket mismatch)'));
+          };
+
+          xhr.onabort = () => {
+            currentXhrRef.current = null;
+            reject(new Error('Upload cancelled.'));
+          };
+
+          xhr.open('PUT', uploadUrl, true);
+          xhr.setRequestHeader('Content-Type', selectedFile.type);
+          xhr.send(selectedFile);
+        });
+
+        finalResult = {
+          uploadUrl,
+          fileKey,
+          publicUrl,
+          friendlyUrl,
+          expiresIn,
+          uploadMethod: 'direct-presigned',
+        };
+      } catch (tier1Error: any) {
+        console.warn('Tier 1 Direct Upload failed. Initiating Murphy-Law Tier 2 Server Fallback...', tier1Error);
+        
+        // Tier 2: Automatic Server Proxy Upload Fallback
+        const fallbackData = await executeServerFallbackUpload(selectedFile);
+        finalResult = {
+          fileKey: fallbackData.fileKey,
+          publicUrl: fallbackData.publicUrl,
+          friendlyUrl: fallbackData.friendlyUrl,
+          uploadMethod: 'server-proxy-fallback',
+        };
       }
 
-      const { uploadUrl, fileKey, publicUrl, friendlyUrl, expiresIn } = data;
+      if (!finalResult) {
+        throw new Error('Upload could not be completed.');
+      }
 
-      // Step 2: Upload directly to Backblaze B2 using presigned PUT URL
-      setUploadStage('uploading-b2');
-
-      await new Promise<void>((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        currentXhrRef.current = xhr;
-
-        xhr.upload.onprogress = (event) => {
-          if (event.lengthComputable) {
-            const percentComplete = Math.round((event.loaded / event.total) * 100);
-            setUploadProgress(percentComplete);
-          }
-        };
-
-        xhr.onload = () => {
-          currentXhrRef.current = null;
-          if (xhr.status >= 200 && xhr.status < 300) {
-            resolve();
-          } else {
-            reject(
-              new Error(
-                `Direct upload to Backblaze B2 failed (HTTP ${xhr.status}). ${
-                  xhr.status === 404
-                    ? 'Bucket not found. Check B2_BUCKET_NAME in .env.local.'
-                    : 'Check B2 bucket CORS & S3 Put permissions.'
-                }`
-              )
-            );
-          }
-        };
-
-        xhr.onerror = () => {
-          currentXhrRef.current = null;
-          reject(
-            new Error(
-              'Network error during direct upload to Backblaze B2. Check bucket CORS configuration in B2 console.'
-            )
-          );
-        };
-
-        xhr.onabort = () => {
-          currentXhrRef.current = null;
-          reject(new Error('Upload cancelled.'));
-        };
-
-        xhr.open('PUT', uploadUrl, true);
-        xhr.setRequestHeader('Content-Type', selectedFile.type);
-        xhr.send(selectedFile);
-      });
-
-      // Step 3: Successfully completed
-      const resultObj: UploadResult = {
-        uploadUrl,
-        fileKey,
-        publicUrl,
-        friendlyUrl,
-        expiresIn,
-      };
-
-      setUploadResult(resultObj);
+      setUploadResult(finalResult);
       setUploadStage('completed');
       setIsUploading(false);
       setUploadProgress(100);
 
       // Save to media history
       const newMediaItem: UploadedMediaItem = {
-        id: fileKey,
+        id: finalResult.fileKey,
         name: selectedFile.name,
-        publicUrl,
-        friendlyUrl,
-        fileKey,
+        publicUrl: finalResult.publicUrl,
+        friendlyUrl: finalResult.friendlyUrl,
+        fileKey: finalResult.fileKey,
         size: selectedFile.size,
         type: selectedFile.type,
         uploadedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -293,13 +350,16 @@ export default function ImageUploader({
       saveToMediaLibrary(newMediaItem);
 
       if (onUploadSuccess) {
-        onUploadSuccess(resultObj);
+        onUploadSuccess(finalResult);
       }
     } catch (err: any) {
-      console.error('Image upload failed:', err);
+      console.error('All upload strategies exhausted:', err);
       setIsUploading(false);
       setUploadStage('error');
       setErrorMessage(err.message || 'An unexpected error occurred during upload.');
+      if (err.recommendation) {
+        setErrorRecommendation(err.recommendation);
+      }
     }
   };
 
@@ -340,14 +400,65 @@ export default function ImageUploader({
             </div>
             <div>
               <h2 className="text-lg font-bold text-gray-900 leading-tight">Upload Image &amp; Get Link</h2>
-              <p className="text-xs text-gray-500">Backblaze B2 Direct Storage</p>
+              <p className="text-xs text-gray-500">Backblaze B2 Direct + Auto-Fallback Storage</p>
             </div>
           </div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-primary-navy text-xs font-semibold">
-            <ShieldCheck size={14} className="text-accent-red" />
-            <span>Presigned S3</span>
-          </div>
+          <button
+            type="button"
+            onClick={runDiagnostic}
+            disabled={diagnosticRunning}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 hover:bg-blue-100 border border-blue-200 text-primary-navy text-xs font-semibold transition-colors cursor-pointer"
+            title="Test Backblaze B2 Connection"
+          >
+            {diagnosticRunning ? (
+              <Loader2 size={13} className="animate-spin" />
+            ) : (
+              <Activity size={13} className="text-accent-red" />
+            )}
+            <span>B2 Health Check</span>
+          </button>
         </div>
+
+        {/* Diagnostic Results Box (if triggered) */}
+        {diagnosticResult && (
+          <div className={`mb-6 p-4 rounded-xl border text-xs space-y-2 animate-fade-up ${
+            diagnosticResult.connected 
+              ? 'bg-emerald-50 border-emerald-200 text-emerald-900' 
+              : 'bg-amber-50 border-amber-200 text-amber-900'
+          }`}>
+            <div className="flex items-center justify-between font-bold">
+              <div className="flex items-center gap-1.5">
+                {diagnosticResult.connected ? (
+                  <CheckCircle2 size={16} className="text-emerald-600" />
+                ) : (
+                  <AlertCircle size={16} className="text-amber-600" />
+                )}
+                <span>B2 Connection Diagnostic</span>
+              </div>
+              <button 
+                type="button" 
+                onClick={() => setDiagnosticResult(null)} 
+                className="text-gray-400 hover:text-gray-700 cursor-pointer"
+              >
+                <X size={14} />
+              </button>
+            </div>
+
+            <div className="space-y-1 font-mono text-[11px]">
+              <div><strong>Bucket Name in .env.local:</strong> {diagnosticResult.bucketName}</div>
+              <div><strong>Status:</strong> {diagnosticResult.connected ? 'Connected & Bucket Found' : 'Inaccessible or Not Found'}</div>
+              {diagnosticResult.error && (
+                <div className="text-red-700 font-semibold">Error: {diagnosticResult.error}</div>
+              )}
+            </div>
+
+            {diagnosticResult.recommendation && (
+              <div className="p-2 bg-white/80 rounded border border-amber-200 text-amber-800 font-sans text-xs">
+                💡 <strong>Fix:</strong> {diagnosticResult.recommendation}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Hidden File Input */}
         <input
@@ -435,8 +546,9 @@ export default function ImageUploader({
                 <div className="flex items-center justify-between text-xs font-medium text-gray-700">
                   <span className="flex items-center gap-1.5">
                     <Loader2 size={14} className="animate-spin text-primary-navy" />
-                    {uploadStage === 'requesting-url' && 'Getting secure upload authorization...'}
-                    {uploadStage === 'uploading-b2' && `Streaming directly to Backblaze B2 (${uploadProgress}%)`}
+                    {uploadStage === 'requesting-url' && 'Getting secure authorization...'}
+                    {uploadStage === 'uploading-b2' && `Direct upload to Backblaze B2 (${uploadProgress}%)`}
+                    {uploadStage === 'fallback-server' && 'Executing seamless server fallback proxy...'}
                   </span>
                   <span className="font-mono font-bold text-primary-navy">{uploadProgress}%</span>
                 </div>
@@ -491,7 +603,7 @@ export default function ImageUploader({
               <div className="min-w-0 flex-1">
                 <h3 className="text-sm font-bold text-emerald-900">Image Uploaded Successfully!</h3>
                 <p className="text-xs text-emerald-700 mt-0.5">
-                  Link generated. Copy the URL or code snippet below to use anywhere on your website.
+                  Link generated ({uploadResult.uploadMethod === 'server-proxy-fallback' ? 'Via Secure Fallback Proxy' : 'Via Direct S3'}).
                 </p>
               </div>
             </div>
@@ -590,10 +702,6 @@ export default function ImageUploader({
                     </a>
                   </div>
                 </div>
-
-                <p className="text-[11px] text-gray-500">
-                  Tip: Direct URL can be used in your components, CSS backgrounds, database records, or image tags.
-                </p>
               </div>
             </div>
 
@@ -608,21 +716,40 @@ export default function ImageUploader({
           </div>
         )}
 
-        {/* Error Alert Message */}
+        {/* Error Alert Message with Murphy's Law Fix Guide */}
         {errorMessage && (
-          <div className="mt-5 p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3 animate-fade-up">
-            <AlertCircle size={20} className="text-red-600 shrink-0 mt-0.5" />
-            <div className="min-w-0 flex-1">
-              <h4 className="text-sm font-semibold text-red-900">Upload Failed</h4>
-              <p className="text-xs text-red-700 mt-0.5 leading-relaxed">{errorMessage}</p>
+          <div className="mt-5 p-5 rounded-xl bg-red-50 border border-red-200 space-y-3 animate-fade-up">
+            <div className="flex items-start gap-3">
+              <AlertCircle size={22} className="text-red-600 shrink-0 mt-0.5" />
+              <div className="min-w-0 flex-1">
+                <h4 className="text-sm font-bold text-red-900">Upload Issue Detected</h4>
+                <p className="text-xs text-red-700 mt-1 leading-relaxed">{errorMessage}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setErrorMessage(null)}
+                className="text-red-400 hover:text-red-700 p-1 cursor-pointer"
+              >
+                <X size={16} />
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={() => setErrorMessage(null)}
-              className="text-red-400 hover:text-red-700 p-1 cursor-pointer"
-            >
-              <X size={16} />
-            </button>
+
+            {errorRecommendation && (
+              <div className="p-3 bg-white/90 rounded-lg border border-red-200 text-xs text-red-800 font-medium">
+                🔧 <strong>How to solve this:</strong> {errorRecommendation}
+              </div>
+            )}
+
+            <div className="pt-1 flex items-center gap-2">
+              <button
+                type="button"
+                onClick={runDiagnostic}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-100 hover:bg-red-200 text-red-800 text-xs font-semibold transition-colors cursor-pointer"
+              >
+                <Wrench size={14} />
+                <span>Run Diagnostic Test</span>
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -722,7 +849,7 @@ export default function ImageUploader({
             <span className="text-purple-700">import</span> Image <span className="text-purple-700">from</span> <span className="text-emerald-700">&apos;next/image&apos;</span>;
             <br /><br />
             <span className="text-blue-700">&lt;Image</span>
-            <br />&nbsp;&nbsp;src=<span className="text-emerald-700">&quot;https://my-app-key.s3.us-east-005.backblazeb2.com/uploads/...&quot;</span>
+            <br />&nbsp;&nbsp;src=<span className="text-emerald-700">&quot;https://your-bucket.s3.us-east-005.backblazeb2.com/uploads/...&quot;</span>
             <br />&nbsp;&nbsp;alt=<span className="text-emerald-700">&quot;Appliance Service Banner&quot;</span>
             <br />&nbsp;&nbsp;width=&#123;800&#125;
             <br />&nbsp;&nbsp;height=&#123;500&#125;
@@ -731,7 +858,7 @@ export default function ImageUploader({
 
           <div className="bg-white p-4 rounded-xl border border-blue-100 space-y-2 font-mono text-[11px] text-gray-800">
             <span className="text-gray-400 block">// Example 2: In brandData.ts or database objects</span>
-            image: <span className="text-emerald-700">&apos;https://my-app-key.s3.us-east-005.backblazeb2.com/uploads/...&apos;</span>
+            image: <span className="text-emerald-700">&apos;https://your-bucket.s3.us-east-005.backblazeb2.com/uploads/...&apos;</span>
           </div>
         </div>
       </div>
