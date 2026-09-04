@@ -5,12 +5,13 @@ export async function GET() {
   try {
     const result = await testB2Connection();
     return NextResponse.json(result);
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
       {
         connected: false,
         bucketExists: false,
-        error: error.message,
+        error: message,
       },
       { status: 500 }
     );

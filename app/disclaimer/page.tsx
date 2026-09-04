@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ArrowLeft, AlertOctagon, ShieldAlert, CheckCircle2, Info, ExternalLink } from 'lucide-react';
+import { ArrowLeft, AlertOctagon, ShieldAlert, Info } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Disclaimer & Non-Affiliation Notice | Customer Care',

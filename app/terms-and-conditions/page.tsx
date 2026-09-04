@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ArrowLeft, FileText, AlertTriangle, CheckCircle, Scale, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, FileText, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Terms and Conditions | Customer Care Home Appliance Support',

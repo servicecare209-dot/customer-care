@@ -75,49 +75,54 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.06 }}
-              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-200/80 transition-all duration-300 flex flex-col cursor-pointer"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-200/80 hover:border-primary-navy/20 transition-all duration-300 flex flex-col cursor-pointer"
               onClick={() => setSelectedIndex(index)}
             >
-              {/* Image Container with Exact 4:3 Aspect Ratio */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+              {/* Premium Studio Showcase Container with Uncropped Centered Image */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-b from-gray-50/80 via-white to-gray-100/70 flex items-center justify-center p-3 border-b border-gray-100">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain object-center p-2.5 group-hover:scale-105 transition-transform duration-500 drop-shadow-sm"
                   loading="lazy"
                 />
                 
-                {/* Subtle Gradient Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950/75 via-gray-950/15 to-transparent opacity-60 group-hover:opacity-85 transition-opacity duration-300" />
-                
                 {/* Category Pill Badge */}
-                <div className="absolute top-3.5 left-3.5">
-                  <span className="bg-white/95 backdrop-blur-md text-primary-navy text-[11px] font-bold px-3 py-1 rounded-full shadow-sm border border-white/50 flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 z-10">
+                  <span className="bg-white/95 backdrop-blur-md text-primary-navy text-[11px] font-bold px-3 py-1 rounded-full shadow-xs border border-gray-200/80 flex items-center gap-1.5">
                     <ShieldCheck size={12} className="text-accent-red" />
                     {item.category}
                   </span>
                 </div>
 
                 {/* Floating Quick-View Icon on Hover */}
-                <div className="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                <div className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-primary-navy/80 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
                   <Eye size={15} />
-                </div>
-
-                {/* Title In Overlay */}
-                <div className="absolute bottom-3.5 left-4 right-4 text-white">
-                  <p className="text-sm sm:text-base font-bold leading-tight drop-shadow-sm">
-                    {item.title}
-                  </p>
                 </div>
               </div>
 
-              {/* Card Footer Text */}
-              <div className="p-4 bg-white flex-grow flex flex-col justify-between">
-                <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
-                  {item.alt}
-                </p>
+              {/* Clean Professional Card Body */}
+              <div className="p-4 sm:p-5 bg-white flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 group-hover:text-primary-navy transition-colors line-clamp-1 mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed">
+                    {item.alt}
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                  <span className="text-green-600 font-semibold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    Doorstep Diagnostics
+                  </span>
+                  <span className="text-primary-navy font-bold group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5">
+                    View <ChevronRight size={13} />
+                  </span>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -132,7 +137,7 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/92 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6"
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6"
             onClick={() => setSelectedIndex(null)}
           >
             {/* Top Bar: Brand Identifier + Counter + Close Button */}
@@ -172,14 +177,14 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
                 <ChevronLeft size={22} />
               </button>
 
-              {/* Main Image Frame (4:3 Uniform Aspect Ratio) */}
+              {/* Main Image Frame (Uncropped Centered Object-Contain) */}
               <motion.div
                 key={selectedIndex}
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
-                className="relative w-full max-w-3xl aspect-[4/3] max-h-[66vh] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black"
+                className="relative w-full max-w-3xl aspect-[4/3] max-h-[68vh] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-gradient-to-b from-gray-900 via-gray-950 to-black p-4 flex items-center justify-center"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image
@@ -187,7 +192,7 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
                   alt={activeImage.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 896px"
-                  className="object-cover object-center"
+                  className="object-contain object-center p-3"
                   priority
                 />
               </motion.div>

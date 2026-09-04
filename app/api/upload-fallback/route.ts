@@ -78,13 +78,14 @@ export async function POST(request: NextRequest) {
       uploadMethod: 'free-local-storage',
       message: 'Image uploaded and saved successfully (100% Free - No Card Required)!',
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('[API /api/upload-fallback] Error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Server-side upload failed.';
     
     return NextResponse.json(
       {
         success: false,
-        error: error.message || 'Server-side upload failed.',
+        error: errorMessage,
       },
       { status: 500 }
     );

@@ -87,9 +87,9 @@ export default function BrandHero({ brand }: { brand: BrandData }) {
           );
         })}
 
-        {/* High-Contrast Multi-Layer Dark Gradients for Text Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-950/85 to-gray-900/70 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-gray-950/50 z-10" />
+        {/* Balanced Low-Opacity Overlay for Classic Visible Look with High Text Clarity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950/80 via-gray-950/50 to-gray-950/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-gray-950/20 z-10" />
       </div>
 
       {/* Main Container */}
@@ -104,13 +104,13 @@ export default function BrandHero({ brand }: { brand: BrandData }) {
             className="lg:col-span-7"
           >
             {/* Top Brand Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-xs tracking-wider uppercase mb-4 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white font-semibold text-xs tracking-wider uppercase mb-4 shadow-sm">
               <Sparkles size={13} className="text-accent-red" />
               <span>Independent {brand.name} Support • India</span>
             </div>
             
             {/* Single H1 Tag */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.15] mb-4 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.15] mb-4 tracking-tight drop-shadow-md">
               {brand.title.split(brand.name).map((part, i, arr) => (
                 <span key={i}>
                   {part}
@@ -120,7 +120,7 @@ export default function BrandHero({ brand }: { brand: BrandData }) {
             </h1>
             
             {/* Subtext / Value Prop */}
-            <p className="text-sm sm:text-base md:text-lg text-gray-200 mb-6 leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-base md:text-lg text-gray-100 mb-6 leading-relaxed max-w-xl drop-shadow-sm font-medium">
               {brand.description}
             </p>
 

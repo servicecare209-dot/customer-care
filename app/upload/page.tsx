@@ -3,13 +3,9 @@ import type { Metadata } from 'next';
 import ImageUploader from '@/components/ImageUploader';
 import { 
   CloudUpload, 
-  ShieldCheck, 
   Zap, 
-  CheckCircle2, 
-  ArrowRight, 
   Terminal, 
   Layers, 
-  Database,
   Lock
 } from 'lucide-react';
 import Link from 'next/link';

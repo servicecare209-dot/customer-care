@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ArrowLeft, Cookie, Settings, Eye, CheckCircle2, Shield } from 'lucide-react';
+import { ArrowLeft, Cookie, Settings, Eye, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy | Customer Care Home Appliance Support',

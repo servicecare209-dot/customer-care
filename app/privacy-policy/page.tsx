@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ArrowLeft, Shield, Lock, Eye, Bell, Cookie } from 'lucide-react';
+import { ArrowLeft, Shield, Cookie } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Customer Care Home Appliance Support',

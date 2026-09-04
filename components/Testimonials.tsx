@@ -51,7 +51,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <blockquote className="text-gray-700 leading-relaxed mb-6 flex-grow italic">
-                "{review.text}"
+                &ldquo;{review.text}&rdquo;
               </blockquote>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-primary-navy font-bold text-xl">

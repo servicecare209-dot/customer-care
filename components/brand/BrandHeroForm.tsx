@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ChevronDown, CheckCircle, Loader2 } from 'lucide-react';
@@ -12,13 +12,8 @@ interface BrandHeroFormProps {
 }
 
 export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
-  const [mounted, setMounted] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Available service options based on the brand's services
   const defaultServices = [

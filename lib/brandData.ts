@@ -51,12 +51,9 @@ export const brands: BrandData[] = [
     name: 'LG',
     title: 'LG Appliance Repair & Service Support in India',
     tagline: 'Specialized Doorstep Diagnostics for LG Smart Inverter & AI DirectDrive Appliances',
-    heroImage: '/images/brands/lg/lg-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/1f7bd1ad-f87d-45d4-b6fc-eeb6619bb504.png',
     heroImages: [
-      { src: '/images/brands/lg/lg-hero-1.webp', alt: 'LG service technician in official uniform repairing AI DirectDrive washing machine in Delhi home', tagline: 'AI DirectDrive Washer Diagnostics' },
-      { src: '/images/brands/lg/lg-hero-2.webp', alt: 'LG technician inspecting Smart Inverter compressor on double-door refrigerator in India', tagline: 'Linear Inverter Compressor Service' },
-      { src: '/images/brands/lg/lg-hero-3.webp', alt: 'Certified HVAC engineer servicing LG Dual Inverter split AC indoor unit with pressure manifold', tagline: 'Dual Inverter Split AC Maintenance' },
-      { src: '/images/brands/lg/lg-hero-4.webp', alt: 'Electronics specialist testing LG OLED 4K Smart TV display panel and motherboard in New Delhi', tagline: 'OLED 4K TV Panel & Circuit Diagnostics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/1f7bd1ad-f87d-45d4-b6fc-eeb6619bb504.png', alt: 'LG appliance service and technician support in India', tagline: 'Certified LG Repair & Diagnostics' }
     ],
     description: 'Independent out-of-warranty repair service for LG refrigerators, washing machines, inverter air conditioners, microwave ovens, and Smart TVs across India.',
     overviewParagraphs: [
@@ -94,11 +91,11 @@ export const brands: BrandData[] = [
       { q: 'Are you an official LG authorized service center?', a: 'No. We are an independent, third-party repair provider specializing exclusively in affordable out-of-warranty appliances.' }
     ],
     gallery: [
-      { src: '/images/brands/lg/lg-gallery-1.webp', alt: 'Certified technician repairing LG AI DirectDrive front-load washing machine in an Indian home', title: 'LG Washing Machine Drum Diagnostics', category: 'Washing Machine' },
-      { src: '/images/brands/lg/lg-gallery-2.webp', alt: 'Doorstep technician inspecting LG Smart Inverter refrigerator compressor and cooling coils', title: 'LG Refrigerator Compressor Repair', category: 'Refrigerator' },
-      { src: '/images/brands/lg/lg-gallery-3.webp', alt: 'HVAC engineer servicing LG Dual Inverter split AC indoor unit in India apartment', title: 'LG Dual Inverter AC Servicing', category: 'Air Conditioner' },
-      { src: '/images/brands/lg/lg-gallery-4.webp', alt: 'Electronics specialist testing LG microwave magnetron and high-voltage circuit board', title: 'LG Convection Microwave Repair', category: 'Microwave' },
-      { src: '/images/brands/lg/lg-gallery-5.webp', alt: 'Display technician troubleshooting LG OLED 4K Smart TV backlight and motherboard', title: 'LG OLED TV Panel Diagnostics', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/8c724907-0b31-49f8-835c-7f8494672f9c.png', alt: 'LG Washing Machine Models - Front Load, Top Load, and Semi-Automatic repair and service in India', title: 'LG Washing Machine Lineup & Diagnostics', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/481c2387-b4a1-4ba3-a6a9-73e3ed0bc155.png', alt: 'LG Single Door & Double Door Frost-Free Smart Inverter Refrigerator Repair and Service in India', title: 'LG Refrigerator Lineup & Cooling Service', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/ba9bf70c-4e64-44b7-ac92-1ce68e2ad822.png', alt: 'LG Dual Inverter & Smart Inverter Split AC Installation, Repair and Gas Charging in India', title: 'LG Dual Inverter AC Servicing', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/a7fcca58-5b6a-410b-a13b-17a356cb713b.png', alt: 'LG Charcoal Convection, Grill & Solo Microwave Oven Repair and Magnetron Service in India', title: 'LG Convection Microwave Diagnostics', category: 'Microwave' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/2f469b73-0b0c-4f47-a807-2248ed0b7f72.png', alt: 'LG LED, LCD, OLED & 4K Smart TV repair and panel service in India', title: 'LG Smart TV & Display Diagnostics', category: 'Television' },
       { src: '/images/brands/lg/lg-gallery-6.webp', alt: 'Satisfied Indian customer receiving digital service invoice after LG appliance repair', title: 'Doorstep Customer Satisfaction', category: 'Service Guarantee' }
     ]
   },
@@ -107,12 +104,9 @@ export const brands: BrandData[] = [
     name: 'Samsung',
     title: 'Samsung Appliance Repair & Service Support in India',
     tagline: 'Expert Independent Technicians for Samsung Digital Inverter & EcoBubble Technology',
-    heroImage: '/images/brands/samsung/samsung-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/c125bf56-90bb-40a9-b9e4-aaf98f457490.png',
     heroImages: [
-      { src: '/images/brands/samsung/samsung-hero-1.webp', alt: 'Samsung technician in official uniform repairing EcoBubble front load washing machine in Indian home', tagline: 'EcoBubble Washing Machine Diagnostics' },
-      { src: '/images/brands/samsung/samsung-hero-2.webp', alt: 'Samsung service technician testing SpaceMax Digital Inverter refrigerator cooling system', tagline: 'SpaceMax Digital Inverter Fridge Repair' },
-      { src: '/images/brands/samsung/samsung-hero-3.webp', alt: 'HVAC specialist servicing Samsung WindFree split air conditioner in Gurgaon apartment', tagline: 'WindFree Inverter AC Maintenance' },
-      { src: '/images/brands/samsung/samsung-hero-4.webp', alt: 'Display engineer repairing Samsung QLED 4K Smart TV motherboard and LED backlight', tagline: 'QLED 4K Smart TV Panel Diagnostics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/c125bf56-90bb-40a9-b9e4-aaf98f457490.png', alt: 'Samsung Appliance Repair & Complete Service Support in India', tagline: 'Certified Samsung Support' }
     ],
     description: 'Fast doorstep repair and maintenance for Samsung refrigerators, EcoBubble washing machines, WindFree ACs, microwaves, and Smart TVs in India.',
     overviewParagraphs: [
@@ -150,12 +144,12 @@ export const brands: BrandData[] = [
       { q: 'What warranty is offered on replaced Samsung parts?', a: 'We offer a 30-day warranty on all replaced spare parts and repair labor.' }
     ],
     gallery: [
-      { src: '/images/brands/samsung/samsung-gallery-1.webp', alt: 'Technician testing Samsung EcoBubble washing machine digital control board with multimeter in Indian utility room', title: 'Samsung EcoBubble Washer Service', category: 'Washing Machine' },
-      { src: '/images/brands/samsung/samsung-gallery-2.webp', alt: 'Engineer diagnosing cooling issues on Samsung SpaceMax French Door Refrigerator in Delhi modular kitchen', title: 'Samsung SpaceMax Fridge Repair', category: 'Refrigerator' },
-      { src: '/images/brands/samsung/samsung-gallery-3.webp', alt: 'AC specialist servicing Samsung WindFree Inverter air conditioner with manifold gauges in Gurugram apartment', title: 'Samsung WindFree AC Servicing', category: 'Air Conditioner' },
-      { src: '/images/brands/samsung/samsung-gallery-4.webp', alt: 'Technician repairing Samsung Ceramic Enamel microwave oven motherboard with digital testing tools', title: 'Samsung Microwave PCB Diagnosis', category: 'Microwave' },
-      { src: '/images/brands/samsung/samsung-gallery-5.webp', alt: 'Television engineer repairing Samsung QLED 4K Smart TV backlight and power circuit board', title: 'Samsung QLED TV Panel Repair', category: 'Television' },
-      { src: '/images/brands/samsung/samsung-gallery-6.webp', alt: 'Happy Indian homeowner giving thumbs up next to restored Samsung washing machine', title: 'Samsung Doorstep Resolution', category: 'Service Guarantee' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/d278666f-2420-4fb5-bfce-1bc87b81eb66.png', alt: 'Samsung EcoBubble Front Load & Wobble Top Load Washing Machine Repair and Service in India', title: 'Samsung EcoBubble Washer Service', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/249e3ffb-ef36-4a3c-9e60-e0f0487bd388.png', alt: 'Samsung SpaceMax Twin Cooling Inverter Refrigerator Repair and Compressor Service in India', title: 'Samsung SpaceMax Fridge Repair', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/8f7b0c50-883b-4672-becd-9d9104223d8a.png', alt: 'Samsung Digital Inverter & WindFree Split AC Repair, Gas Refill and Servicing in India', title: 'Samsung Inverter AC Servicing', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/6683d7ab-a37d-45aa-ad3c-91680e73fc3b.png', alt: 'Samsung 28L Slim Fry Ceramic Enamel Convection Microwave Oven Diagnostics and Repair in India', title: 'Samsung Slim Fry Microwave Repair', category: 'Microwave' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/8a1db1e5-0a78-48bb-8c29-71acbe5230cd.png', alt: 'Samsung Smart TV, Crystal 4K, QLED & OLED Display Panel and Motherboard Service in India', title: 'Samsung Smart TV Diagnostics', category: 'Television' },
+      { src: '/images/brands/samsung/samsung-gallery-6.webp', alt: 'Certified doorstep engineer delivering verified invoice and service warranty for Samsung appliance repair', title: 'Samsung Doorstep Resolution', category: 'Service Guarantee' }
     ]
   },
   {
@@ -163,12 +157,9 @@ export const brands: BrandData[] = [
     name: 'Whirlpool',
     title: 'Whirlpool Appliance Repair & Service in India',
     tagline: 'Reliable Doorstep Support for Whirlpool 6th Sense Appliances & IntelliFresh Fridges',
-    heroImage: '/images/brands/whirlpool/whirlpool-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/a2db8549-594c-4318-8c55-b794e35c6c6d.png',
     heroImages: [
-      { src: '/images/brands/whirlpool/whirlpool-hero-1.webp', alt: 'Whirlpool technician repairing 360 BloomWash washing machine drum mechanism in Indian home', tagline: '360 BloomWash Drum Overhaul' },
-      { src: '/images/brands/whirlpool/whirlpool-hero-2.webp', alt: 'Whirlpool service engineer checking IntelliFresh refrigerator compressor and thermostat', tagline: 'IntelliFresh Refrigerator Diagnostics' },
-      { src: '/images/brands/whirlpool/whirlpool-hero-3.webp', alt: 'AC specialist servicing Whirlpool 3D Cool Inverter split AC indoor unit in India', tagline: '3D Cool Inverter AC Servicing' },
-      { src: '/images/brands/whirlpool/whirlpool-hero-4.webp', alt: 'Television engineer testing display panel and power board on smart TV in living room', tagline: 'Smart TV Motherboard Repairs' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/a2db8549-594c-4318-8c55-b794e35c6c6d.png', alt: 'Whirlpool IntelliFresh & 6th Sense Appliance Repair and Service Support in India', tagline: 'Certified Whirlpool Support' }
     ],
     description: 'Professional out-of-warranty repair for Whirlpool refrigerators, washing machines, 3D Cool air conditioners, and microwaves across India.',
     overviewParagraphs: [
@@ -202,11 +193,11 @@ export const brands: BrandData[] = [
       { q: 'Do you use original compatible spare parts?', a: 'We source certified, heavy-duty replacement spares designed to match Whirlpool manufacturer specifications.' }
     ],
     gallery: [
-      { src: '/images/brands/whirlpool/whirlpool-gallery-1.webp', alt: 'Technician overhauling Whirlpool 360 BloomWash washing machine spin tub and agitator gears', title: 'Whirlpool BloomWash Tub Service', category: 'Washing Machine' },
-      { src: '/images/brands/whirlpool/whirlpool-gallery-2.webp', alt: 'Diagnostic engineer checking cooling sensors on Whirlpool Protton 3-Door refrigerator in Delhi home', title: 'Whirlpool IntelliFresh Cooling Check', category: 'Refrigerator' },
-      { src: '/images/brands/whirlpool/whirlpool-gallery-3.webp', alt: 'AC technician servicing Whirlpool 3D Cool Inverter AC with pressure testing kit in Noida', title: 'Whirlpool 3D Cool AC Maintenance', category: 'Air Conditioner' },
-      { src: '/images/brands/whirlpool/whirlpool-gallery-4.webp', alt: 'Specialist testing Whirlpool Magicook convection microwave oven heating element in workshop', title: 'Whirlpool Magicook Microwave Fix', category: 'Microwave' },
-      { src: '/images/brands/whirlpool/whirlpool-gallery-5.webp', alt: 'Technician testing television circuit and power board connection in an Indian living room', title: 'Smart TV Diagnostics', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/96b68f2d-0703-4293-b8fe-e5310817e354.png', alt: 'Whirlpool BloomWash & Front Load Washing Machine Repair and Service in India', title: 'Whirlpool Washing Machine Service', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/422cb12e-7772-4fab-8347-d4bac6f1431f.png', alt: 'Whirlpool IntelliFresh & French Door Frost-Free Refrigerator Repair and Compressor Service in India', title: 'Whirlpool Refrigerator Repair', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/d7678495-8b6f-4ecc-bf14-a70088e6fa4b.png', alt: 'Whirlpool 3D Cool Inverter Split AC Maintenance, Installation and Gas Refilling in India', title: 'Whirlpool 3D Cool AC Servicing', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/d75d5e5f-0efd-4026-8e63-5735db4c6b5f.png', alt: 'Whirlpool Magicook & Convection Microwave Oven Repair and Magnetron Diagnostics in India', title: 'Whirlpool Microwave Diagnostics', category: 'Microwave' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/519462a5-0fae-42e7-92ee-740298d698b3.png', alt: 'Whirlpool Smart TV Diagnostics, Display Panel, Motherboard & Audio Circuit Service in India', title: 'Whirlpool Smart TV Diagnostics', category: 'Television' },
       { src: '/images/brands/whirlpool/whirlpool-gallery-6.webp', alt: 'Technician explaining repaired Whirlpool home appliance maintenance to Indian family', title: 'Whirlpool Customer Handover', category: 'Service Guarantee' }
     ]
   },
@@ -215,12 +206,9 @@ export const brands: BrandData[] = [
     name: 'Bosch',
     title: 'Bosch Appliance Repair & Service Support in India',
     tagline: 'Premium Precision Service for German-Engineered Bosch Home Appliances',
-    heroImage: '/images/brands/bosch/bosch-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/f8d1cb36-9b76-4a9c-ba3b-8618d8a73521.png',
     heroImages: [
-      { src: '/images/brands/bosch/bosch-hero-1.webp', alt: 'Bosch specialist servicing Serie 6 front load washing machine drum in modern Indian home', tagline: 'Serie 6 EcoSilence Drum Service' },
-      { src: '/images/brands/bosch/bosch-hero-2.webp', alt: 'Technician inspecting Bosch VarioInverter refrigerator cooling coils with electronic meter', tagline: 'VarioInverter Refrigerator Maintenance' },
-      { src: '/images/brands/bosch/bosch-hero-3.webp', alt: 'HVAC technician maintaining split air conditioning unit in Gurgaon residence', tagline: 'Climate Control Inverter Service' },
-      { src: '/images/brands/bosch/bosch-hero-4.webp', alt: 'Display technician troubleshooting television motherboard and backlight circuits', tagline: 'Electronics Circuit Diagnostics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/f8d1cb36-9b76-4a9c-ba3b-8618d8a73521.png', alt: 'Bosch German Engineered Home Appliances Repair and Service in India', tagline: 'Certified Bosch Support' }
     ],
     description: 'Specialized independent repair for Bosch front-load washing machines, VarioInverter refrigerators, dishwashers, and ovens across India.',
     overviewParagraphs: [
@@ -254,9 +242,9 @@ export const brands: BrandData[] = [
       { q: 'Is there a service warranty on Bosch repairs?', a: 'Yes. All Bosch repair jobs include a 30-day warranty covering replacement parts and technician labor.' }
     ],
     gallery: [
-      { src: '/images/brands/bosch/bosch-gallery-1.webp', alt: 'Precision engineer servicing Bosch Serie 6 front load washing machine drum in modern Indian home', title: 'Bosch Serie 6 Drum Maintenance', category: 'Washing Machine' },
-      { src: '/images/brands/bosch/bosch-gallery-2.webp', alt: 'Technician testing Bosch VarioInverter refrigerator temperature thermistor with digital meter', title: 'Bosch VarioInverter Fridge Service', category: 'Refrigerator' },
-      { src: '/images/brands/bosch/bosch-gallery-3.webp', alt: 'HVAC technician maintaining split air conditioning unit with specialized deep cleaning shroud', title: 'Inverter Air Conditioner Servicing', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/1374e2a0-4f7d-4a36-a3b6-f3e705d38b72.png', alt: 'Bosch Serie 4 & Serie 6 Front Load Washing Machine Repair and EcoSilence Drum Maintenance in India', title: 'Bosch Serie 6 Washing Machine Service', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/ace8aae5-832e-4bbe-af5d-3d0f1541d453.png', alt: 'Bosch Serie 4 & Serie 6 VarioInverter Bottom Freezer Refrigerator Repair and Service in India', title: 'Bosch VarioInverter Fridge Service', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/4e0e01ca-ac93-499f-b6b5-b779378e15e9.png', alt: 'Bosch Climate Inverter Split Air Conditioner Maintenance, Gas Charging & PCB Diagnostics in India', title: 'Bosch Climate Inverter AC Service', category: 'Air Conditioner' },
       { src: '/images/brands/bosch/bosch-gallery-4.webp', alt: 'Electronics specialist calibrating Bosch built-in convection microwave control board', title: 'Bosch Built-in Microwave Repair', category: 'Microwave' },
       { src: '/images/brands/bosch/bosch-gallery-5.webp', alt: 'Display engineer repairing television motherboard circuitry and power supply unit', title: 'Smart TV Component Diagnostics', category: 'Television' },
       { src: '/images/brands/bosch/bosch-gallery-6.webp', alt: 'Technician completing repair with positive customer handover in New Delhi apartment', title: 'German Precision Quality Assured', category: 'Service Guarantee' }
@@ -267,12 +255,9 @@ export const brands: BrandData[] = [
     name: 'IFB',
     title: 'IFB Appliance Repair & Service Support in India',
     tagline: 'Dedicated Doorstep Specialists for IFB Senator, Executive & FastCool Appliances',
-    heroImage: '/images/brands/ifb/ifb-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/a7d42646-0916-4102-9f96-406691ab923d.png',
     heroImages: [
-      { src: '/images/brands/ifb/ifb-hero-1.webp', alt: 'IFB technician repairing Senator front load washing machine drum suspension in Delhi home', tagline: 'Senator Front Load Drum Service' },
-      { src: '/images/brands/ifb/ifb-hero-2.webp', alt: 'Service technician inspecting refrigerator compressor and sealed refrigerant lines', tagline: 'Sealed Refrigeration System Check' },
-      { src: '/images/brands/ifb/ifb-hero-3.webp', alt: 'HVAC engineer servicing IFB FastCool split AC outdoor condenser with manifold gauges', tagline: 'FastCool Inverter AC Maintenance' },
-      { src: '/images/brands/ifb/ifb-hero-4.webp', alt: 'Electronics specialist testing television circuit board and internal power components', tagline: 'Electronics Motherboard Repair' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/a7d42646-0916-4102-9f96-406691ab923d.png', alt: 'IFB Home Appliances Repair and Service Support in India', tagline: 'Certified IFB Support' }
     ],
     description: 'Expert out-of-warranty repair for IFB front-load washing machines, top-loaders, microwave ovens, and FastCool air conditioners in India.',
     overviewParagraphs: [
@@ -290,6 +275,7 @@ export const brands: BrandData[] = [
     seoDescription: 'Expert IFB appliance repair across Delhi, Noida & Gurugram. Fast doorstep service for IFB Front Load Washing Machines, Microwaves & ACs. Call us today!',
     services: [
       { name: 'IFB Washing Machine Repair', description: 'Fixing drum shaking, door error codes, heating coil scale buildup, and program selector PCB faults.', iconType: 'washing-machine' },
+      { name: 'IFB Refrigerator Service', description: 'Frost-free cooling restoration, gas charging, electronic sensor testing, and compressor diagnostics.', iconType: 'refrigerator' },
       { name: 'IFB Air Conditioner Service', description: 'FastCool cooling optimization, PCB repair, gas refilling, and indoor unit deep cleaning.', iconType: 'ac' },
       { name: 'IFB Microwave Oven Repair', description: 'Resolving turntable rotation stops, spark generation, keypad touch errors, and magnetron failure.', iconType: 'microwave' }
     ],
@@ -303,10 +289,10 @@ export const brands: BrandData[] = [
       { q: 'How quickly can I get an IFB technician in India?', a: 'We schedule technician visits within 30 to 60 minutes of booking confirmation across all NCR sectors.' }
     ],
     gallery: [
-      { src: '/images/brands/ifb/ifb-gallery-1.webp', alt: 'Technician replacing drum bearing on IFB Senator front-load washing machine in Indian utility room', title: 'IFB Senator Drum Overhaul', category: 'Washing Machine' },
-      { src: '/images/brands/ifb/ifb-gallery-2.webp', alt: 'Engineer checking refrigerator cooling system and sealed gas lines in Delhi residence', title: 'Refrigerator System Check', category: 'Refrigerator' },
-      { src: '/images/brands/ifb/ifb-gallery-3.webp', alt: 'HVAC technician maintaining outdoor AC condenser unit with pressure gauges in Gurgaon', title: 'IFB FastCool AC Repair', category: 'Air Conditioner' },
-      { src: '/images/brands/ifb/ifb-gallery-4.webp', alt: 'Electronics specialist testing IFB 30L convection microwave oven high-voltage transformer', title: 'IFB Convection Microwave Testing', category: 'Microwave' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/3a5d906e-c4e2-49e7-86c3-71cfe57202fe.png', alt: 'IFB Diva Aqua SX 6kg Front Load Washing Machine Repair and Service in India', title: 'IFB Diva Aqua Washing Machine Service', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/56578bd7-63bb-494b-aaa4-382864d107d0.png', alt: 'IFB Bottom Freezer Frost Free Refrigerator Repair and Compressor Diagnostics in India', title: 'IFB Bottom Freezer Refrigerator Repair', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/1f582725-1b6b-4437-9141-1996a046b1e6.png', alt: 'IFB FastCool Eco Inverter Split Air Conditioner Maintenance, Gas Refilling and PCB Diagnostics in India', title: 'IFB FastCool Eco Inverter AC Service', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/dfb6eb95-df7f-404b-bf22-3bd3f9f73e4a.png', alt: 'IFB 20SC2 Convection Microwave Oven Repair and Multi-Stage Magnetron Diagnostics in India', title: 'IFB 20SC2 Microwave Diagnostics', category: 'Microwave' },
       { src: '/images/brands/ifb/ifb-gallery-5.webp', alt: 'Television technician repairing audio/video board connections on smart TV', title: 'TV Electronics Diagnostics', category: 'Television' },
       { src: '/images/brands/ifb/ifb-gallery-6.webp', alt: 'Friendly technician completing IFB home appliance repair with Indian customer in Noida', title: 'IFB Same-Day Service Assured', category: 'Service Guarantee' }
     ]
@@ -316,12 +302,9 @@ export const brands: BrandData[] = [
     name: 'Haier',
     title: 'Haier Appliance Repair & Service Support in India',
     tagline: 'Reliable Doorstep Support for Haier Bottom-Mounted Fridges & Inverter ACs',
-    heroImage: '/images/brands/haier/haier-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/7d08039a-41c8-41da-aae3-2b011414db8f.png',
     heroImages: [
-      { src: '/images/brands/haier/haier-hero-1.webp', alt: 'Haier technician servicing Direct Motion front load washing machine in Indian apartment', tagline: 'Direct Motion Washing Machine Service' },
-      { src: '/images/brands/haier/haier-hero-2.webp', alt: 'Technician inspecting Haier Bottom-Mounted Refrigerator cooling and defrost timer', tagline: 'Bottom-Mounted Refrigerator Diagnostics' },
-      { src: '/images/brands/haier/haier-hero-3.webp', alt: 'HVAC engineer servicing Haier Triple Inverter split air conditioner in Delhi home', tagline: 'Triple Inverter Split AC Care' },
-      { src: '/images/brands/haier/haier-hero-4.webp', alt: 'Electronics specialist testing smart TV motherboard and display backlight circuits', tagline: 'Smart Android TV Diagnostics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/7d08039a-41c8-41da-aae3-2b011414db8f.png', alt: 'Haier Inspired Living Smart Home Appliances Repair and Service in India', tagline: 'Certified Haier Support' }
     ],
     description: 'Prompt out-of-warranty service for Haier refrigerators, Direct Motion washing machines, inverter air conditioners, and LED TVs across India.',
     overviewParagraphs: [
@@ -353,11 +336,11 @@ export const brands: BrandData[] = [
       { q: 'What areas in India do you cover for Haier repair?', a: 'We cover Delhi, Noida, Greater Noida, Ghaziabad, Faridabad, and Gurugram.' }
     ],
     gallery: [
-      { src: '/images/brands/haier/haier-gallery-1.webp', alt: 'Technician testing Direct Motion motor and drum in Haier front load washing machine', title: 'Haier Direct Motion Washer Service', category: 'Washing Machine' },
-      { src: '/images/brands/haier/haier-gallery-2.webp', alt: 'Diagnostic engineer checking airflow damper on Haier Bottom-Mounted Refrigerator in Indian kitchen', title: 'Haier BMR Refrigerator Repair', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/ab700b62-3ea3-4c36-9a4e-24ceaa8619f9.png', alt: 'Haier Top Load Washing Machine Series Diagnostics and Repair in India', title: 'Haier Top Load Washer Service', category: 'Washing Machine' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/7f13b892-85f9-4cf9-bba2-ff24f6cfe90f.png', alt: 'Haier Bottom Mounted BMR Frost Free Magic Convertible Refrigerator Repair and Service in India', title: 'Haier BMR Refrigerator Repair', category: 'Refrigerator' },
       { src: '/images/brands/haier/haier-gallery-3.webp', alt: 'Air conditioning technician cleaning and servicing Haier Self-Clean Inverter split AC in Delhi', title: 'Haier Inverter AC Servicing', category: 'Air Conditioner' },
-      { src: '/images/brands/haier/haier-gallery-4.webp', alt: 'Technician repairing microwave oven internal turntable mechanism and heating coil', title: 'Microwave Diagnostic Inspection', category: 'Microwave' },
-      { src: '/images/brands/haier/haier-gallery-5.webp', alt: 'TV specialist repairing Smart Android TV display screen and LED backlight strips', title: 'Haier Smart TV Panel Fix', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/e8c6dbf0-6542-4400-97b0-c27968bbe25d.png', alt: 'Haier Floral Convection & Grill Microwave Oven Repair and Magnetron Diagnostics in India', title: 'Haier Convection Microwave Repair', category: 'Microwave' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/93596c02-313b-4a22-9b2d-54f05f4eb5ac.png', alt: 'Haier 4K UHD Smart Android TV Display Panel, Motherboard and Backlight Repair in India', title: 'Haier 4K UHD Smart TV Repair', category: 'Television' },
       { src: '/images/brands/haier/haier-gallery-6.webp', alt: 'Satisfied customer in Ghaziabad home following successful Haier appliance repair', title: 'Haier Doorstep Reliability', category: 'Service Guarantee' }
     ]
   },
@@ -366,12 +349,9 @@ export const brands: BrandData[] = [
     name: 'Hitachi',
     title: 'Hitachi Appliance Repair & Service in India',
     tagline: 'High-End Precision Diagnostics for Hitachi Inverter ACs & French Door Refrigerators',
-    heroImage: '/images/brands/hitachi/hitachi-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/381d8495-cd19-48ff-9eac-131611c410ed.png',
     heroImages: [
-      { src: '/images/brands/hitachi/hitachi-hero-1.webp', alt: 'Hitachi specialist testing Tropical Inverter split AC compressor with diagnostic kit in Delhi', tagline: 'Tropical Inverter AC Servicing' },
-      { src: '/images/brands/hitachi/hitachi-hero-2.webp', alt: 'Service engineer checking Hitachi French Door refrigerator vacuum cooling compartment', tagline: 'French Door Refrigerator Service' },
-      { src: '/images/brands/hitachi/hitachi-hero-3.webp', alt: 'HVAC technician measuring refrigerant pressures on Hitachi inverter outdoor condenser', tagline: 'Inverter Gas Calibration & Brazing' },
-      { src: '/images/brands/hitachi/hitachi-hero-4.webp', alt: 'Display technician repairing motherboard circuit board on high-definition smart television', tagline: 'Smart TV Electronics Diagnostics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/381d8495-cd19-48ff-9eac-131611c410ed.png', alt: 'Hitachi Home Appliances Repair and Service Support in India', tagline: 'Certified Hitachi Support' }
     ],
     description: 'Expert independent repair for premium Hitachi split/window air conditioners and multi-door French door refrigerators in India.',
     overviewParagraphs: [
@@ -389,7 +369,9 @@ export const brands: BrandData[] = [
     seoDescription: 'Specialized Hitachi AC and Refrigerator repair in Delhi, Gurugram & Noida. Expert doorstep technicians for high-end Hitachi appliances. Call our helpline!',
     services: [
       { name: 'Hitachi Air Conditioner Repair', description: 'Tropical Inverter PCB repair, blower motor fixes, coil leak brazing, and gas recharging.', iconType: 'ac' },
-      { name: 'Hitachi Refrigerator Service', description: 'Vacuum compartment seal repairs, inverter compressor diagnostics, and defrost sensor replacements.', iconType: 'refrigerator' }
+      { name: 'Hitachi Refrigerator Service', description: 'Vacuum compartment seal repairs, inverter compressor diagnostics, and defrost sensor replacements.', iconType: 'refrigerator' },
+      { name: 'Hitachi Washing Machine Service', description: 'Sensor calibration, drum motor diagnostics, drain pump clearance, and electronic board servicing.', iconType: 'washing-machine' },
+      { name: 'Hitachi Microwave & Oven Repair', description: 'Magnetron replacement, touch control board repairs, heating element testing, and door interlock fixes.', iconType: 'microwave' }
     ],
     commonProblems: [
       { title: 'AC Timer LED Blinking Error', description: 'Interpreting blink codes to isolate indoor sensor, fan motor, or outdoor inverter board faults.' },
@@ -400,11 +382,11 @@ export const brands: BrandData[] = [
       { q: 'Are genuine compatible spare parts used for Hitachi?', a: 'We strictly use high-grade, certified replacement components to protect your investment in Hitachi appliances.' }
     ],
     gallery: [
-      { src: '/images/brands/hitachi/hitachi-gallery-1.webp', alt: 'HVAC specialist testing Hitachi Tropical Inverter AC outdoor compressor and capacitor unit', title: 'Hitachi Inverter AC Outdoor Service', category: 'Air Conditioner' },
-      { src: '/images/brands/hitachi/hitachi-gallery-2.webp', alt: 'Engineer inspecting French Door Refrigerator vacuum compartment and electronic sensors', title: 'Hitachi French Door Fridge Repair', category: 'Refrigerator' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/466fef67-be92-4aaa-8e1c-f60806513983.png', alt: 'Hitachi Xpand Cool & Inverter Window AC Diagnostics, Servicing and PCB Repair in India', title: 'Hitachi Inverter AC Servicing', category: 'Air Conditioner' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/93aa77b7-c314-4b70-a98d-ad3058d187c1.png', alt: 'Hitachi 550L 2-Door Inverter Dual Fan Cooling Frost Free Refrigerator Repair and Compressor Service in India', title: 'Hitachi Inverter Refrigerator Repair', category: 'Refrigerator' },
       { src: '/images/brands/hitachi/hitachi-gallery-3.webp', alt: 'Technician checking refrigerant pressure and airflow on indoor split AC unit in Gurugram', title: 'Hitachi AC Gas Top-up & Calibration', category: 'Air Conditioner' },
       { src: '/images/brands/hitachi/hitachi-gallery-4.webp', alt: 'Electronics specialist troubleshooting high-voltage appliance circuit boards', title: 'Hitachi Control PCB Diagnostics', category: 'Electronics' },
-      { src: '/images/brands/hitachi/hitachi-gallery-5.webp', alt: 'Television technician testing motherboard circuits and video display connectors', title: 'Display Circuit Diagnostics', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/WhatsApp-Image-2025-12-21-at-4.35.30h-PM.jpg', alt: 'Hitachi Smart HDR10 4K LED TV Display Panel, Motherboard and Power Diagnostics in India', title: 'Hitachi Smart TV Diagnostics', category: 'Television' },
       { src: '/images/brands/hitachi/hitachi-gallery-6.webp', alt: 'Customer satisfaction handover following premium Hitachi appliance service in India', title: 'Hitachi Premium Support Guarantee', category: 'Service Guarantee' }
     ]
   },
@@ -445,7 +427,8 @@ export const brands: BrandData[] = [
       { title: 'Water Draining Slowly in Top Loaders', description: 'Removing lint debris from drain valves and replacing worn drain bellows.' }
     ],
     faqs: [
-      { q: 'Do you repair older Godrej refrigerator models?', a: 'Yes. We service both legacy Godrej direct-cool models and the newest inverter multi-door series.' }
+      { q: 'Do you repair older Godrej refrigerator models?', a: 'Yes. We service both legacy Godrej direct-cool models and the newest inverter multi-door series.' },
+      { q: 'Are spare parts available for Godrej washing machines and ACs?', a: 'Yes. Our technicians carry original-compatible relays, capacitors, motors, and electronic boards for fast doorstep fixes.' }
     ],
     gallery: [
       { src: '/images/brands/godrej/godrej-gallery-1.webp', alt: 'Technician replacing pulsator and drive belt on Godrej Eon Allure washing machine in Delhi home', title: 'Godrej Eon Washing Machine Service', category: 'Washing Machine' },
@@ -461,12 +444,9 @@ export const brands: BrandData[] = [
     name: 'Sony',
     title: 'Sony BRAVIA TV Repair & Service in India',
     tagline: 'Precision Electronics Diagnosis for Sony BRAVIA OLED, 4K HDR & Google TVs',
-    heroImage: '/images/brands/sony/sony-hero-1.webp',
+    heroImage: 'https://ik.imagekit.io/b2gtgefhu/000385da-1df1-476c-bffc-ffb449db3f2b.png',
     heroImages: [
-      { src: '/images/brands/sony/sony-hero-1.webp', alt: 'Sony BRAVIA technician testing OLED 4K display panel and motherboard in New Delhi', tagline: 'Sony BRAVIA OLED 4K Calibration' },
-      { src: '/images/brands/sony/sony-hero-2.webp', alt: 'Specialist performing micro-soldering on Sony TV power supply and T-Con board', tagline: 'Sony Motherboard Micro-Soldering' },
-      { src: '/images/brands/sony/sony-hero-3.webp', alt: 'Electronics engineer repairing Sony TV HDMI ports and Acoustic Surface audio circuits', tagline: 'Acoustic Surface Audio Diagnostics' },
-      { src: '/images/brands/sony/sony-hero-4.webp', alt: 'HVAC technician testing inverter cooling circuit in modern Indian apartment', tagline: 'Precision Inverter Electronics' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/000385da-1df1-476c-bffc-ffb449db3f2b.png', alt: 'Sony BRAVIA TV Repair and Certified Doorstep Service Support in India', tagline: 'Certified Sony BRAVIA Support' }
     ],
     description: 'Expert doorstep repair for Sony BRAVIA LED, OLED, 4K HDR, and Android Smart televisions across India.',
     overviewParagraphs: [
@@ -475,10 +455,11 @@ export const brands: BrandData[] = [
       'Our team provides doorstep TV diagnostics across India, resolving power module faults, T-Con board timing errors, and LED backlight failures.'
     ],
     supportedModels: [
-      'Sony BRAVIA XR OLED & Master Series',
-      'Sony BRAVIA 4K Ultra HD LED TVs',
-      'Sony BRAVIA Google & Android Smart TVs',
-      'Sony Full Array LED & Mini LED Series'
+      'Sony BRAVIA XR OLED & Master Series (A80L, A95L)',
+      'Sony BRAVIA 3 4K HDR Series (S30 / X80L)',
+      'Sony BRAVIA 4K Ultra HD LED & Google TVs',
+      'Sony Full HD & 32-inch HD X-Protection PRO Series',
+      'Sony Full Array LED & Mini LED Series (X90L, X95L)'
     ],
     seoTitle: 'Sony TV Repair & Service in India | Customer Care',
     seoDescription: 'Expert Sony BRAVIA TV repair service in India. Doorstep diagnostics for Sony OLED, 4K HDR & LED TVs. Red light blinking & display fixes. Call us now!',
@@ -494,15 +475,18 @@ export const brands: BrandData[] = [
     ],
     faqs: [
       { q: 'What does the Sony TV red blinking light mean?', a: 'The number of blinks indicates a specific hardware diagnostic code. For example, 6 blinks indicates a backlight or power inverter circuit issue.' },
-      { q: 'Do you repair Sony BRAVIA TVs at my home?', a: 'Yes. We inspect and repair motherboard, power supply, and backlight issues right at your doorstep.' }
+      { q: 'Do you repair Sony BRAVIA TVs at my home?', a: 'Yes. We inspect and repair motherboard, power supply, and backlight issues right at your doorstep.' },
+      { q: 'Do you service Sony BRAVIA OLED and 4K Google TVs?', a: 'Yes. Our senior engineers specialize in Sony XR OLED panels, Cognitive Processor motherboards, and Google TV firmware.' }
     ],
     gallery: [
-      { src: '/images/brands/sony/sony-gallery-1.webp', alt: 'Display technician testing Sony BRAVIA OLED 4K TV motherboard and color test panel in Indian home', title: 'Sony BRAVIA OLED Panel Testing', category: 'Television' },
-      { src: '/images/brands/sony/sony-gallery-2.webp', alt: 'Specialist micro-soldering Sony TV power supply module and T-Con timing controller board', title: 'Sony TV Motherboard Micro-Soldering', category: 'Television' },
-      { src: '/images/brands/sony/sony-gallery-3.webp', alt: 'Electronics engineer repairing Sony TV HDMI ARC ports and optical audio output circuits', title: 'Sony Acoustic Audio Troubleshooting', category: 'Television' },
-      { src: '/images/brands/sony/sony-gallery-4.webp', alt: 'Technician testing smart washing machine control circuitry and motor electronics', title: 'Home Electronics Testing', category: 'Electronics' },
-      { src: '/images/brands/sony/sony-gallery-5.webp', alt: 'Air conditioning technician checking inverter cooling circuit in modern Indian apartment', title: 'Inverter Climate Electronics', category: 'Electronics' },
-      { src: '/images/brands/sony/sony-gallery-6.webp', alt: 'Satisfied customer watching restored Sony BRAVIA TV in modern Delhi living room', title: 'Sony Visual Experience Restored', category: 'Service Guarantee' }
+      { src: 'https://ik.imagekit.io/b2gtgefhu/af344f4d-fae7-4546-ad4e-a07c3e27ee38.png', alt: 'Sony BRAVIA XR 55 inch OLED 4K UHD Dolby Vision Atmos TV diagnostics and motherboard service in India', title: 'Sony BRAVIA XR 55" OLED 4K TV Diagnostics', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/165b5eeb-0c9e-4b2e-b1da-6f2922a98159.png', alt: 'Sony BRAVIA 3 55 inch 4K Ultra HD X1 Processor Smart TV repair and panel service in India', title: 'Sony BRAVIA 3 55" 4K Ultra HD TV', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/b23ac65d-040c-4b62-be97-5eedf6eaec00.png', alt: 'Sony BRAVIA 4K HDR TRILUMINOS Google TV Dolby Vision Atmos motherboard and backlight repair in India', title: 'Sony BRAVIA 4K HDR TRILUMINOS Google TV', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/baf02223-bd72-4024-989e-c3675d671c4d.png', alt: 'Sony Full HD 1080p Smart TV with X-Reality PRO and ClearAudio+ audio IC repair in India', title: 'Sony Full HD Smart TV (X-Reality PRO)', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/c197d096-aaf4-4ad8-b0e8-c5742b689737.png', alt: 'Sony BRAVIA Google TV 4K Series screen replacement and power board diagnostics in India', title: 'Sony BRAVIA Google TV Smart Series', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/e583be99-b237-4077-a56a-04947104c231.png', alt: 'Sony BRAVIA 32 inch HD LED TV with X-Protection PRO and Multi-Indian Languages repair in India', title: 'Sony BRAVIA 32" HD LED (X-Protection PRO)', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/cd364e07-ab0a-4750-9e98-5da8b64802b8.png', alt: 'Sony BRAVIA 3 Series 4K HDR Smart TV display panel and backlight strip replacement in India', title: 'Sony BRAVIA 3 4K HDR Display Diagnostics', category: 'Television' },
+      { src: 'https://ik.imagekit.io/b2gtgefhu/ee31240c-d281-4fb5-a23f-40c42f7120b2.png', alt: 'Sony 4K HDR Google TV with X1 4K Processor and Ok Google voice search repair in India', title: 'Sony 4K HDR Google TV (X1 Processor)', category: 'Television' }
     ]
   },
   {
@@ -543,7 +527,8 @@ export const brands: BrandData[] = [
       { title: 'U11 Water Drainage Error in Washing Machines', description: 'Clearing drain pump chokes and checking electronic pressure switch contacts.' }
     ],
     faqs: [
-      { q: 'Do you service Panasonic MiraIE Inverter ACs?', a: 'Yes. We diagnose and repair Panasonic Wi-Fi and IoT-enabled MiraIE inverter control boards.' }
+      { q: 'Do you service Panasonic MiraIE Inverter ACs?', a: 'Yes. We diagnose and repair Panasonic Wi-Fi and IoT-enabled MiraIE inverter control boards.' },
+      { q: 'How fast can a technician arrive for Panasonic repair?', a: 'We offer same-day doorstep scheduling across Delhi, Gurugram, Noida, and Faridabad.' }
     ],
     gallery: [
       { src: '/images/brands/panasonic/panasonic-gallery-1.webp', alt: 'Technician servicing Panasonic MiraIE Smart Inverter split AC with pressure gauges in Gurgaon home', title: 'Panasonic MiraIE AC Servicing', category: 'Air Conditioner' },
@@ -589,7 +574,8 @@ export const brands: BrandData[] = [
       { title: 'Uneven Heating in Convection Mode', description: 'Testing convection heating elements and thermostatic temperature sensors.' }
     ],
     faqs: [
-      { q: 'Do you repair Sharp Microwave Ovens?', a: 'Yes. Sharp microwaves are one of our core specialties, including convection, grill, and commercial units.' }
+      { q: 'Do you repair Sharp Microwave Ovens?', a: 'Yes. Sharp microwaves are one of our core specialties, including convection, grill, and commercial units.' },
+      { q: 'Do you repair Sharp Aquos LED and Smart TVs?', a: 'Yes. We service Aquos LED backlights, power supplies, motherboard chips, and display panels.' }
     ],
     gallery: [
       { src: '/images/brands/sharp/sharp-gallery-1.webp', alt: 'Electronics specialist testing Sharp Carousel microwave oven high-voltage diode and magnetron', title: 'Sharp Carousel Microwave Repair', category: 'Microwave' },

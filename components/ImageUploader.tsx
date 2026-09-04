@@ -12,7 +12,6 @@ import {
   Loader2, 
   FileImage,
   RefreshCw,
-  ShieldCheck,
   Image as ImageIcon,
   Trash2,
   Sparkles,
@@ -67,7 +66,14 @@ export default function ImageUploader({
   
   // Diagnostics
   const [diagnosticRunning, setDiagnosticRunning] = useState(false);
-  const [diagnosticResult, setDiagnosticResult] = useState<any>(null);
+  const [diagnosticResult, setDiagnosticResult] = useState<{
+    connected: boolean;
+    bucketExists?: boolean;
+    bucketName?: string;
+    endpoint?: string;
+    error?: string;
+    recommendation?: string;
+  } | null>(null);
 
   // Media library stored in localStorage
   const [mediaLibrary, setMediaLibrary] = useState<UploadedMediaItem[]>([]);
@@ -201,10 +207,11 @@ export default function ImageUploader({
       const res = await fetch('/api/b2-diagnostic');
       const data = await res.json();
       setDiagnosticResult(data);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const errMessage = err instanceof Error ? err.message : 'Failed to contact diagnostic endpoint';
       setDiagnosticResult({
         connected: false,
-        error: err.message || 'Failed to contact diagnostic endpoint',
+        error: errMessage,
       });
     } finally {
       setDiagnosticRunning(false);
@@ -285,13 +292,14 @@ export default function ImageUploader({
       if (onUploadSuccess) {
         onUploadSuccess(finalResult);
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('All upload strategies exhausted:', err);
       setIsUploading(false);
       setUploadStage('error');
-      setErrorMessage(err.message || 'An unexpected error occurred during upload.');
-      if (err.recommendation) {
-        setErrorRecommendation(err.recommendation);
+      const msg = err instanceof Error ? err.message : 'An unexpected error occurred during upload.';
+      setErrorMessage(msg);
+      if (err && typeof err === 'object' && 'recommendation' in err && typeof (err as { recommendation: string }).recommendation === 'string') {
+        setErrorRecommendation((err as { recommendation: string }).recommendation);
       }
     }
   };
@@ -778,7 +786,7 @@ export default function ImageUploader({
           </p>
 
           <div className="bg-white p-4 rounded-xl border border-blue-100 space-y-2 font-mono text-[11px] text-gray-800">
-            <span className="text-gray-400 block">// Example 1: In your Next.js Page or Component</span>
+            <span className="text-gray-400 block">{'// Example 1: In your Next.js Page or Component'}</span>
             <span className="text-purple-700">import</span> Image <span className="text-purple-700">from</span> <span className="text-emerald-700">&apos;next/image&apos;</span>;
             <br /><br />
             <span className="text-blue-700">&lt;Image</span>
@@ -790,7 +798,7 @@ export default function ImageUploader({
           </div>
 
           <div className="bg-white p-4 rounded-xl border border-blue-100 space-y-2 font-mono text-[11px] text-gray-800">
-            <span className="text-gray-400 block">// Example 2: In brandData.ts or database objects</span>
+            <span className="text-gray-400 block">{'// Example 2: In brandData.ts or database objects'}</span>
             image: <span className="text-emerald-700">&apos;https://your-bucket.s3.us-east-005.backblazeb2.com/uploads/...&apos;</span>
           </div>
         </div>

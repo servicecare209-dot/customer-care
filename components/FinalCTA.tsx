@@ -15,7 +15,7 @@ export default function FinalCTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
           Need Appliance Repair? <br className="hidden sm:block" />
-          <span className="text-accent-red">We're Ready to Help.</span>
+          <span className="text-accent-red">We&apos;re Ready to Help.</span>
         </h2>
         <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
           Contact our customer care team for instant doorstep service assistance today.

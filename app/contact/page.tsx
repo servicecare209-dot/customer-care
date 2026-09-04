@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { brandBookingSchema, BrandBookingFormData } from '@/lib/validations/bookingSchema';
-import { ArrowLeft, Phone, Mail, MapPin, Clock, ShieldCheck, CheckCircle, Loader2, Send, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Phone, Mail, MapPin, Clock, CheckCircle, Loader2, Send, ChevronDown } from 'lucide-react';
 
 export default function ContactPage() {
   const [isSuccess, setIsSuccess] = useState(false);

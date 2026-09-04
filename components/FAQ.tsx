@@ -50,7 +50,7 @@ export default function FAQ() {
             <MessageCircleQuestion size={16} className="text-accent-red" /> FAQ
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Got Questions? <span className="text-primary-navy">We've Got Answers</span>
+            Got Questions? <span className="text-primary-navy">We&apos;ve Got Answers</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about our appliance repair services, pricing, and process.

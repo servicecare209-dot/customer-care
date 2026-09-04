@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FinalCTA from '@/components/FinalCTA';
-import { ArrowLeft, ShieldCheck, Wrench, Clock, Award, Users, CheckCircle2, PhoneCall } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Wrench, Clock, Award, CheckCircle2, PhoneCall } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us | Customer Care Home Appliance Support',

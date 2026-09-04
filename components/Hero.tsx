@@ -89,14 +89,13 @@ export default function Hero() {
               {/* Fallback pattern if image is missing */}
               <div className="absolute inset-0 bg-gray-200" />
               <Image 
-                src="/images/hero.jpg" 
-                alt="Professional Indian technician repairing washing machine" 
+                src="https://ik.imagekit.io/b2gtgefhu/1f7bd1ad-f87d-45d4-b6fc-eeb6619bb504.png" 
+                alt="Professional technician repairing home appliances in India" 
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
-                referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
             
             {/* Floating Card */}

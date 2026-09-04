@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     }
 
     // 2. Parse & Validate JSON Payload
-    let body: any;
+    let body: Record<string, unknown> | null = null;
     try {
       body = await request.json();
     } catch {
@@ -156,13 +156,14 @@ export async function POST(request: NextRequest) {
         },
       }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('[API /api/get-upload-url] Error generating presigned URL:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Failed to generate presigned upload URL. Please check server configuration.';
     
     return NextResponse.json(
       {
         success: false,
-        error: error.message || 'Failed to generate presigned upload URL. Please check server configuration.',
+        error: errorMessage,
       },
       { status: 500 }
     );

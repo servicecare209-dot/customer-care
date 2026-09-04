@@ -8,6 +8,7 @@ import path from 'path';
  */
 export const ALLOWED_IMAGE_TYPES = [
   'image/jpeg',
+  'image/jpg',
   'image/png',
   'image/webp',
 ] as const;
@@ -16,6 +17,7 @@ export type AllowedImageType = (typeof ALLOWED_IMAGE_TYPES)[number];
 
 const MIME_EXTENSION_MAP: Record<AllowedImageType, string[]> = {
   'image/jpeg': ['.jpg', '.jpeg'],
+  'image/jpg': ['.jpg', '.jpeg'],
   'image/png': ['.png'],
   'image/webp': ['.webp'],
 };
@@ -106,13 +108,16 @@ export async function testB2Connection(): Promise<{
         bucketName,
         endpoint,
       };
-    } catch (err: any) {
-      const errorMsg = err.message || '';
+    } catch (err: unknown) {
+      const errName = err && typeof err === 'object' && 'name' in err && typeof (err as { name: string }).name === 'string'
+        ? (err as { name: string }).name
+        : 'Error';
+      const errorMsg = err instanceof Error ? err.message : '';
       let recommendation = 'Check your Backblaze B2 Bucket Settings and permissions.';
 
-      if (err.name === 'NoSuchBucket' || err.name === 'NotFound' || errorMsg.includes('does not exist')) {
+      if (errName === 'NoSuchBucket' || errName === 'NotFound' || errorMsg.includes('does not exist')) {
         recommendation = `The bucket '${bucketName}' does not exist in region '${process.env.B2_REGION || 'us-east-005'}'. Check Backblaze B2 dashboard to get the exact Bucket Name.`;
-      } else if (err.name === 'Forbidden' || err.name === 'AccessDenied' || errorMsg.includes('Access Denied')) {
+      } else if (errName === 'Forbidden' || errName === 'AccessDenied' || errorMsg.includes('Access Denied')) {
         recommendation = 'Your B2 Application Key does not have permission to access this bucket. Create an Application Key with Read/Write access to this bucket.';
       }
 
@@ -121,17 +126,18 @@ export async function testB2Connection(): Promise<{
         bucketExists: false,
         bucketName,
         endpoint,
-        error: `${err.name || 'Error'}: ${err.message || 'Bucket not found or inaccessible'}`,
+        error: `${errName}: ${errorMsg || 'Bucket not found or inaccessible'}`,
         recommendation,
       };
     }
-  } catch (initErr: any) {
+  } catch (initErr: unknown) {
+    const initErrorMsg = initErr instanceof Error ? initErr.message : 'Unknown initialization error';
     return {
       connected: false,
       bucketExists: false,
       bucketName: process.env.B2_BUCKET_NAME || 'undefined',
       endpoint: process.env.B2_ENDPOINT || 'undefined',
-      error: initErr.message,
+      error: initErrorMsg,
       recommendation: 'Check that .env.local contains valid B2_KEY_ID, B2_APPLICATION_KEY, and B2_BUCKET_NAME.',
     };
   }
