@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/images/logo.png',
   },
+  verification: {
+    google: 'eL8UXy8K0Un895mx8W0lpfAFtRvieTkBoJfHC39v6GU',
+  },
 };
 
 import { BookingProvider } from '@/context/BookingContext';
