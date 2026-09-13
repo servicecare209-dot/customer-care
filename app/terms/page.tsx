@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -68,7 +68,7 @@ export default function TermsPage() {
                 For customer support, queries, or service warranty claims, please contact our support desk:
               </p>
               <p className="font-semibold text-primary-navy">
-                Phone: +91 8008070025 | Email: <span className="break-all">support@customercarerepaircenter.com</span>
+                Phone: 09990070697 | Email: <span className="break-all">support@customercarerepaircenter.com</span>
               </p>
             </section>
           </div>
