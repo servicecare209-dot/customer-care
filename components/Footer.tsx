@@ -151,8 +151,8 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Helpline Number</p>
-              <a href="tel:+918008070025" className="text-gray-900 font-bold hover:text-accent-red transition-colors text-base">
-                +91 8008070025
+              <a href="tel:09990070697" className="text-gray-900 font-bold hover:text-accent-red transition-colors text-base">
+                09990070697
               </a>
             </div>
           </div>
