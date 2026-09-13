@@ -65,12 +65,12 @@ export default function WhyChooseUs() {
             </p>
             <div className="flex items-center gap-4">
                <a 
-                 href="tel:09990070697" 
+                 href="tel:+91 9990070697" 
                  suppressHydrationWarning
                  className="inline-flex items-center gap-2 bg-accent-red hover:bg-accent-red-hover text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-lg shadow-accent-red/20"
                >
                  <PhoneCall size={18} />
-                 09990070697
+                 +91 9990070697
                </a>
             </div>
           </motion.div>
