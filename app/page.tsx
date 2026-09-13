@@ -16,7 +16,7 @@ import MobileStickyCTA from '@/components/MobileStickyCTA';
 
 export const metadata: Metadata = {
   title: 'Home Appliance Repair & Service in India | Customer Care',
-  description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call 09990070697!',
+  description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 9990070697!',
   alternates: {
     canonical: 'https://customercarerepaircenter.com/',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Home Appliance Repair & Service in India | Customer Care',
-    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call 09990070697!',
+    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 9990070697!',
     url: 'https://customercarerepaircenter.com/',
     siteName: 'Customer Care Appliance Repair',
     images: [
