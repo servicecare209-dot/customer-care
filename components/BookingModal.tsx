@@ -269,11 +269,11 @@ export default function BookingModal() {
                 
                 <div className="pt-2 flex flex-col sm:flex-row gap-2.5 justify-center">
                   <a
-                    href="tel:09990070697"
+                    href="tel:+91 9990070697"
                     className="inline-flex items-center justify-center gap-2 bg-accent-red hover:bg-accent-red-hover text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-accent-red/20 transition-all min-h-[40px]"
                   >
                     <Phone size={14} />
-                    Call 09990070697
+                    Call +91 9990070697
                   </a>
                   <button
                     type="button"
