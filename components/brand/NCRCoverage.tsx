@@ -195,11 +195,11 @@ export default function NCRCoverage() {
               <span><strong>Doorstep Support:</strong> Serving all 15 locations with verified multi-brand appliance experts.</span>
             </div>
             <a 
-              href="tel:09990070697" 
+              href="tel:+91 9990070697" 
               className="font-bold text-primary-navy hover:text-accent-red transition-colors inline-flex items-center gap-1 shrink-0"
             >
               <Phone size={12} className="text-accent-red" />
-              <span>Helpline: 09990070697</span>
+              <span>Helpline: +91 9990070697</span>
             </a>
           </div>
         </div>
