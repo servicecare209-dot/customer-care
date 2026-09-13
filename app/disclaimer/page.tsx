@@ -117,7 +117,7 @@ export default function DisclaimerPage() {
               <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-sm space-y-2">
                 <p><strong>Entity:</strong> Aksha Traders (Customer Care Appliance Repair)</p>
                 <p><strong>Email:</strong> <a href="mailto:support@customercarerepaircenter.com" className="text-primary-navy font-semibold hover:underline break-all">support@customercarerepaircenter.com</a></p>
-                <p><strong>Telephone:</strong> <a href="tel:+918008070025" className="text-primary-navy font-semibold hover:underline">+91 8008070025</a></p>
+                <p><strong>Telephone:</strong> <a href="tel:09990070697" className="text-primary-navy font-semibold hover:underline">09990070697</a></p>
                 <p><strong>Office Address:</strong> 1009, Shiv Colony, Old Faridabad, Faridabad, Haryana, 121002</p>
                 <p><strong>GSTIN:</strong> 06DHFPA5392N2Z0</p>
               </div>
