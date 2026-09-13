@@ -69,11 +69,11 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <a
-                  href="tel:09990070697"
+                  href="tel:+91 9990070697"
                   className="inline-flex items-center gap-2.5 bg-accent-red hover:bg-accent-red-hover text-white px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-lg shadow-accent-red/20 hover:-translate-y-0.5"
                 >
                   <PhoneCall size={18} />
-                  Call 09990070697
+                  Call +91 9990070697
                 </a>
               </div>
             </div>
