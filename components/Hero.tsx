@@ -52,12 +52,12 @@ export default function Hero() {
                 <span>Book a Service</span>
               </button>
               <a 
-                href="tel:09990070697" 
+                href="tel:+91 9990070697" 
                 suppressHydrationWarning
                 className="flex items-center justify-center gap-2 bg-white border-2 border-gray-200 hover:border-primary-navy text-primary-navy px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all hover:bg-gray-50 min-h-[48px]"
               >
                 <PhoneCall size={20} />
-                <span>09990070697</span>
+                <span>+91 9990070697</span>
               </a>
             </div>
             
