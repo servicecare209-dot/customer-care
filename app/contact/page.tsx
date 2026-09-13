@@ -48,7 +48,7 @@ export default function ContactPage() {
       }
 
       // 2. Dispatch to WhatsApp
-      const whatsappNumber = '918008070025';
+      const whatsappNumber = '919990070697';
       const textMessage = [
         `*NEW CONTACT / SERVICE INQUIRY*`,
         `----------------------------------------`,
@@ -119,10 +119,10 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Customer Helpline</p>
                   <a
-                    href="tel:+918008070025"
+                    href="tel:09990070697"
                     className="text-xl font-extrabold text-primary-navy hover:text-accent-red transition-colors"
                   >
-                    +91 8008070025
+                    09990070697
                   </a>
                   <p className="text-xs text-gray-500 mt-1">Prompt 30-min callback across India</p>
                 </div>
