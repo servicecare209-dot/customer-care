@@ -32,12 +32,12 @@ export default function FinalCTA() {
             Book a Service
           </button>
           <a 
-            href="tel:09990070697" 
+            href="tel:+91 9990070697" 
             suppressHydrationWarning
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all backdrop-blur-sm hover:-translate-y-0.5"
           >
             <Phone size={20} />
-            09990070697
+            +91 9990070697
           </a>
         </div>
       </div>
