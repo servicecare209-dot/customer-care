@@ -156,19 +156,19 @@ export default function Navbar() {
           {/* Call CTA Desktop */}
           <div className="hidden md:flex items-center">
             <a
-              href="tel:09990070697"
+              href="tel:+91 9990070697"
               suppressHydrationWarning
               className="flex items-center gap-2 bg-accent-red hover:bg-accent-red-hover text-white px-5 py-2.5 rounded-full font-semibold transition-colors shadow-sm shadow-accent-red/20"
             >
               <Phone size={18} />
-              <span>09990070697</span>
+              <span>+91 9990070697</span>
             </a>
           </div>
 
           {/* Mobile Right Controls */}
           <div className="flex md:hidden items-center gap-2 shrink-0">
             <a
-              href="tel:09990070697"
+              href="tel:+91 9990070697"
               suppressHydrationWarning
               className="text-accent-red w-9 h-9 bg-red-50 hover:bg-red-100 active:bg-red-200 rounded-full flex items-center justify-center transition-colors shrink-0 shadow-sm"
               aria-label="Call Now"
@@ -304,12 +304,12 @@ export default function Navbar() {
             {/* Drawer Footer — Helpline Number & Operating Hours */}
             <div className="p-4 sm:p-5 border-t border-gray-100 bg-gray-50/90 shrink-0 space-y-2.5">
               <a
-                href="tel:09990070697"
+                href="tel:+91 9990070697"
                 suppressHydrationWarning
                 className="flex items-center justify-center gap-2 bg-primary-navy hover:bg-primary-navy/95 active:scale-[0.99] text-white px-4 py-3.5 rounded-xl font-bold text-base w-full shadow-md transition-all min-h-[48px]"
               >
                 <Phone size={18} className="text-accent-red" />
-                <span className="tracking-tight font-extrabold text-white">09990070697</span>
+                <span className="tracking-tight font-extrabold text-white">+91 9990070697</span>
               </a>
 
               <div className="flex items-center justify-center gap-1.5 text-xs text-gray-500 font-medium">
