@@ -234,7 +234,7 @@ export default function BrandGallery({ brand }: { brand: BrandData }) {
                 </div>
 
                 <a
-                  href="tel:09990070697"
+                  href="tel:+91 9990070697"
                   className="shrink-0 w-full sm:w-auto text-center bg-accent-red hover:bg-accent-red-hover text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2"
                 >
                   <PhoneCall size={14} />
