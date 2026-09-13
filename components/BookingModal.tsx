@@ -166,7 +166,7 @@ export default function BookingModal() {
       }
 
       // 2. Format clean WhatsApp Message for instant technician dispatch
-      const whatsappNumber = '918008070025';
+      const whatsappNumber = '919990070697';
       const textMessage = [
         `*NEW APPLIANCE SERVICE BOOKING*`,
         `----------------------------------------`,
@@ -269,11 +269,11 @@ export default function BookingModal() {
                 
                 <div className="pt-2 flex flex-col sm:flex-row gap-2.5 justify-center">
                   <a
-                    href="tel:+918008070025"
+                    href="tel:09990070697"
                     className="inline-flex items-center justify-center gap-2 bg-accent-red hover:bg-accent-red-hover text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md shadow-accent-red/20 transition-all min-h-[40px]"
                   >
                     <Phone size={14} />
-                    Call +91 8008070025
+                    Call 09990070697
                   </a>
                   <button
                     type="button"
