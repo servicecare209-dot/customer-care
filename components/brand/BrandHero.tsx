@@ -143,12 +143,12 @@ export default function BrandHero({ brand }: { brand: BrandData }) {
             {/* CTA Button & Helpline */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a 
-                href="tel:+918008070025" 
+                href="tel:09990070697" 
                 suppressHydrationWarning
                 className="group inline-flex items-center justify-center gap-2.5 bg-accent-red hover:bg-accent-red-hover text-white px-7 py-3.5 rounded-xl font-bold text-base transition-all duration-300 shadow-xl shadow-accent-red/25 hover:shadow-accent-red/40 hover:-translate-y-0.5"
               >
                 <Phone size={18} className="group-hover:rotate-12 transition-transform" />
-                Call Helpline: +91 8008070025
+                Call Helpline: 09990070697
               </a>
               <span className="text-xs text-gray-400 font-medium">
                 8:00 AM – 9:00 PM • All 7 Days
