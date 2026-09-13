@@ -16,7 +16,7 @@ import MobileStickyCTA from '@/components/MobileStickyCTA';
 
 export const metadata: Metadata = {
   title: 'Home Appliance Repair & Service in India | Customer Care',
-  description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
+  description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call 09990070697!',
   alternates: {
     canonical: 'https://customercarerepaircenter.com/',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Home Appliance Repair & Service in India | Customer Care',
-    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call +91 8008070025!',
+    description: 'Expert doorstep home appliance repair in India. Certified technicians for washing machines, fridges, ACs, microwaves & TVs. Call 09990070697!',
     url: 'https://customercarerepaircenter.com/',
     siteName: 'Customer Care Appliance Repair',
     images: [
@@ -65,7 +65,7 @@ export default function Home() {
         'logo': 'https://customercarerepaircenter.com/images/logo.png',
         'contactPoint': {
           '@type': 'ContactPoint',
-          'telephone': '+91-8008070025',
+          'telephone': '+91-9990070697',
           'contactType': 'customer support',
           'areaServed': 'IN',
           'availableLanguage': ['en', 'hi']
@@ -87,7 +87,7 @@ export default function Home() {
         'image': 'https://customercarerepaircenter.com/images/indian_customer_repair_1787336376855.jpg',
         'description': 'Leading independent doorstep appliance repair service provider across India for washing machines, refrigerators, air conditioners, microwaves, and TVs.',
         'url': 'https://customercarerepaircenter.com/',
-        'telephone': '+918008070025',
+        'telephone': '+919990070697',
         'priceRange': '₹₹',
         'address': {
           '@type': 'PostalAddress',
