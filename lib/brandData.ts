@@ -622,7 +622,7 @@ export const brands: BrandData[] = [
     ],
     faqs: [
       { q: 'Do you provide doorstep repair for Marq appliances?', a: 'Yes. We provide full doorstep repair for Marq ACs, washing machines, and TVs across India.' },
-      { q: 'How do I book a Marq repair technician?', a: 'Simply call our customer care number at +91 8008070025 or click "Book a Service" on this page.' }
+      { q: 'How do I book a Marq repair technician?', a: 'Simply call our customer care number at 09990070697 or click "Book a Service" on this page.' }
     ],
     gallery: [
       { src: '/images/brands/marq/marq-gallery-1.webp', alt: 'Technician checking refrigerant pressure and electrical lines on Marq Inverter Split AC in Delhi', title: 'Marq Inverter AC Servicing', category: 'Air Conditioner' },
