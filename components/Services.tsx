@@ -152,12 +152,12 @@ export default function Services() {
               Book Online
             </button>
             <a
-              href="tel:09990070697"
+              href="tel:+91 9990070697"
               suppressHydrationWarning
               className="inline-flex items-center justify-center gap-2 bg-primary-navy hover:bg-primary-navy-light text-white px-5 py-3 rounded-xl font-bold text-sm transition-all"
             >
               <Phone size={16} />
-              Call 09990070697
+              Call +91 9990070697
             </a>
           </div>
         </motion.div>
