@@ -97,7 +97,7 @@ export default async function BrandPage({ params }: Props) {
         'image': imageUrl,
         'description': brand.seoDescription,
         'url': pageUrl,
-        'telephone': '+918008070025',
+        'telephone': '+919990070697',
         'priceRange': '₹₹',
         'address': {
           '@type': 'PostalAddress',
