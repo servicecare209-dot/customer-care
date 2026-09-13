@@ -64,7 +64,7 @@ export default function BrandHeroForm({ brand }: BrandHeroFormProps) {
       }
 
       // 2. Format clean, professional message for WhatsApp without corrupt unicode characters
-      const whatsappNumber = '919990070697';
+      const whatsappNumber = '+91 9990070697';
       const textMessage = [
         `*NEW APPLIANCE SERVICE REQUEST*`,
         `----------------------------------------`,
